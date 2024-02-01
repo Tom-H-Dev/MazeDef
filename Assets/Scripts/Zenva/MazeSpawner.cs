@@ -12,11 +12,10 @@ public class MazeSpawner : MonoBehaviour
     public MazeGenerationAlgorithm Algorithm = MazeGenerationAlgorithm.PureRecursive;
     public bool FullRandom = false;
     public int RandomSeed = 12345;
-    public GameObject Floor = null;
     public GameObject Wall = null;
     public GameObject Pillar = null;
-    public int Rows = 5;
-    public int Columns = 5;
+    public int Rows;
+    public int Columns;
     public float CellWidth = 5;
     public float CellHeight = 5;
     public bool AddGaps = false;
