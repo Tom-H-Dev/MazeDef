@@ -4,9 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class FinishState : MonoBehaviour
-{
-    private void OnCollisionEnter(Collision collision)
+{ 
+    private void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene("End Screen");
+        if (other.gameObject.TryGetComponent(out FpsMovement l_player))
+        {
+            SceneManager.LoadScene("End Screen");
+        }
     }
 }

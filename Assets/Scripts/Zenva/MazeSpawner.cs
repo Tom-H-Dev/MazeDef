@@ -23,7 +23,7 @@ public class MazeSpawner : MonoBehaviour
     public GameObject GoalPrefab = null;
     private MazeGenerator mMazeGenerator = null;
     private Tile cell;
-    // Start is called before the first frame update
+
     void Start()
     {
         if (!FullRandom)
@@ -48,13 +48,7 @@ public class MazeSpawner : MonoBehaviour
                 cell.y = column;
 
                 GameObject tmp;
-                //tmp = Instantiate(Floor, new Vector3(x, 0, z), Quaternion.Euler(0, 0, 0)) as GameObject;
-                //tmp.transform.parent = transform;
 
-                if (row >= Rows - 1)
-                {
-                    Debug.Log("here");
-                }
                 if (cell.WallRight)
                 {
                     tmp = Instantiate(Wall, new Vector3(x + CellWidth / 2, 1.5f, z) + Wall.transform.position, Quaternion.Euler(0, 90, 0)) as GameObject;// right
@@ -85,7 +79,7 @@ public class MazeSpawner : MonoBehaviour
                     {
                         if (GoalPrefab != null)
                         {
-                            tmp = Instantiate(GoalPrefab, new Vector3(x, 1, z), Quaternion.Euler(0, 0, 0)) as GameObject;
+                            tmp = Instantiate(GoalPrefab, new Vector3(x, 0.5f, z), Quaternion.Euler(0, 0, 0)) as GameObject;
                             tmp.transform.parent = transform;
                         }
                     }
@@ -105,10 +99,5 @@ public class MazeSpawner : MonoBehaviour
                 }
             }
         }
-    }
-
-    public void CanMoveWallsSetting(GameObject l_wall)
-    {
-
     }
 }
