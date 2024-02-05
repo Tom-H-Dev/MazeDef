@@ -20,10 +20,7 @@ public class FpsMovement : MonoBehaviour
 
 
     private Rigidbody _rb;
-
     private Animator _animator;
-
-
 
     void Start()
     {
@@ -33,6 +30,8 @@ public class FpsMovement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
+
+    
 
     void Update()
     {
@@ -55,7 +54,7 @@ public class FpsMovement : MonoBehaviour
 
         _rb.velocity = movement;
 
-        if (Input.GetAxis("Horizontal") > 0 || Input.GetAxis("Horizontal") < 0 || Input.GetAxis("Vertical") > 0 || Input.GetAxis("Vertical") <0)
+        if (deltaX != 0 || deltaZ != 0)
             _animator.SetBool("isMoving", true);
         else _animator.SetBool("isMoving", false);
     }
@@ -72,12 +71,4 @@ public class FpsMovement : MonoBehaviour
 
         headCam.transform.localEulerAngles = new Vector3(rotationVert, headCam.transform.localEulerAngles.y, 0);
     }
-
-    //private void OnControllerColliderHit(ControllerColliderHit hit)
-    //{
-    //    if (hit.gameObject.TryGetComponent(out PressurePlate l_pressurePlate))
-    //    {
-    //        l_pressurePlate.PressurePlateFunctionality(gameObject);
-    //    }
-    //}
 }

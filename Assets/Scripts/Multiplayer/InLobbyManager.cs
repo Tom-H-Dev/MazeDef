@@ -95,7 +95,14 @@ public class InLobbyManager : MonoBehaviourPunCallbacks
                     PhotonNetwork.CurrentRoom.IsOpen = false;
                     _startGameButton.interactable = true;
                 }
+                else
+                {
+                    PhotonNetwork.CurrentRoom.IsVisible = true;
+                    PhotonNetwork.CurrentRoom.IsOpen = true;
+                    _startGameButton.interactable = false;
+                }
             }
+            SetNamesOfLobbyAndConnectedUsers();
         }
     }
 

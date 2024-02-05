@@ -13,6 +13,8 @@ public class InGameMultiplayerManager : MonoBehaviourPunCallbacks
 
     [Tooltip("The list of spawnpoints where the players can spawn.")]
     [SerializeField] private List<GameObject> spawnPositions = new List<GameObject>();
+    
+
     private void Start()
     {
         GameObject l_player = PhotonNetwork.Instantiate(playerPrefab.name, transform.position, Quaternion.identity, 0);
@@ -28,6 +30,7 @@ public class InGameMultiplayerManager : MonoBehaviourPunCallbacks
             l_pInfo.playerName = PhotonNetwork.NickName;
             l_pInfo.id = i + 1;
             l_pInfo.spawnpoint = spawnPositions[i].gameObject;
+            l_pInfo.playerVisuals[i].SetActive(true);
         }
     }
 }
