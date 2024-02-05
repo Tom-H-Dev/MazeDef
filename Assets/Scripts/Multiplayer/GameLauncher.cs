@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using TMPro;
 
 public class GameLauncher : MonoBehaviourPunCallbacks
 {
+    [SerializeField] private TMP_InputField _usernameChoice;
+
     //Users are separated from each other by gameversion (which allows you to make breaking changes).
     string gameVersion = "1.0";
     bool joiningRoom = false;
@@ -47,6 +50,7 @@ public class GameLauncher : MonoBehaviourPunCallbacks
 
             // #Critical
             // Load the Room Level. 
+            if (_usernameChoice.text == "" || _usernameChoice.text == null) PhotonNetwork.NickName = "Player 1";
             PhotonNetwork.LoadLevel("Lobby");
 
         }
@@ -74,5 +78,10 @@ public class GameLauncher : MonoBehaviourPunCallbacks
             PhotonNetwork.ConnectUsingSettings();
             PhotonNetwork.GameVersion = this.gameVersion;
         }
+    }
+
+    public void ChangeNickName()
+    {
+        PhotonNetwork.NickName = _usernameChoice.text;
     }
 }

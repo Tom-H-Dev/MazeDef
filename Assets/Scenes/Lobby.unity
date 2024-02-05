@@ -432,9 +432,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1760887591}
-        m_TargetAssemblyTypeName: GameLauncher, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 1760887592}
+        m_TargetAssemblyTypeName: InGameLobbyManager, Assembly-CSharp
+        m_MethodName: LeaveRoom
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -539,9 +539,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Player 1: Host
-
-    Player 2'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 70ea44f605601d544a25549e7b3b47be, type: 2}
   m_sharedMaterial: {fileID: -5711387502620525696, guid: 70ea44f605601d544a25549e7b3b47be, type: 2}
@@ -1076,9 +1074,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1760887591}
-        m_TargetAssemblyTypeName: GameLauncher, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 1760887592}
+        m_TargetAssemblyTypeName: InLobbyManager, Assembly-CSharp
+        m_MethodName: StartGameButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1288,11 +1286,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1760887591 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7207281276210174705, guid: 98d164ca449e89344820d111517265d1, type: 3}
+--- !u!114 &1760887592 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1916550193750582991, guid: 98d164ca449e89344820d111517265d1, type: 3}
   m_PrefabInstance: {fileID: 6563521026304542736}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536f3d3e3d2343d48ac2f5614c4f0c2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1944499591
 GameObject:
   m_ObjectHideFlags: 0
