@@ -47,7 +47,7 @@ public class GameLauncher : MonoBehaviourPunCallbacks
 
             // #Critical
             // Load the Room Level. 
-            PhotonNetwork.LoadLevel("Maze Coop");
+            PhotonNetwork.LoadLevel("Lobby");
 
         }
     }
