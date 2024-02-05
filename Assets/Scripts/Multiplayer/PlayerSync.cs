@@ -11,19 +11,27 @@ public class PlayerSync : MonoBehaviourPun, IPunObservable
 
     [Tooltip("The gameObjects that should only be active on the local player and will be disabled on other players.")]
     public GameObject[] localObjects;
-    
+
     [Tooltip("The latest position of the other players.")]
     Vector3 latestPos;
 
     [Tooltip("The latest rotation of the other players.")]
     Quaternion latestRot;
 
+    [Tooltip("The gameObject for the pause menu")]
+    [SerializeField] private GameObject _pauseMenu;
+
     // Use this for initialization
     void Start()
     {
         if (photonView.IsMine)
         {
-            //Player is local
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                if (!_pauseMenu.active)
+                    _pauseMenu.SetActive(true);
+                else _pauseMenu.SetActive(false);
+            }
         }
         else
         {

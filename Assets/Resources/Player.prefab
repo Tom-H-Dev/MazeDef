@@ -216,8 +216,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   headCam: {fileID: 5936945196642747624}
   speed: 6
-  _brianModel: {fileID: 0}
-  _biancaModel: {fileID: 0}
 --- !u!114 &2835134292307363155
 MonoBehaviour:
   m_ObjectHideFlags: 0

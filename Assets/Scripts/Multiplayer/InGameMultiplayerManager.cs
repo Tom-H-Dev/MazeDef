@@ -13,7 +13,7 @@ public class InGameMultiplayerManager : MonoBehaviourPunCallbacks
 
     [Tooltip("The list of spawnpoints where the players can spawn.")]
     [SerializeField] private List<GameObject> spawnPositions = new List<GameObject>();
-    
+
 
     private void Start()
     {
@@ -25,12 +25,34 @@ public class InGameMultiplayerManager : MonoBehaviourPunCallbacks
     {
         for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
         {
-            l_player.transform.position = spawnPositions[i].transform.position;
+            //l_player.transform.position = spawnPositions[i].transform.position;
+            if (PhotonNetwork.IsMasterClient)
+                l_player.transform.position = spawnPositions[0].transform.position;
+            else l_player.transform.position = spawnPositions[1].transform.position;
             PlayerInfo l_pInfo = l_player.GetComponent<PlayerInfo>();
             l_pInfo.playerName = PhotonNetwork.NickName;
             l_pInfo.id = i + 1;
             l_pInfo.spawnpoint = spawnPositions[i].gameObject;
             l_pInfo.playerVisuals[i].SetActive(true);
         }
+    }
+
+    private void Update()
+    {
+        if (PhotonNetwork.PlayerList.Length != 2)
+        {
+            LeaveRoom();
+        }
+    }
+
+    public void LeaveRoom()
+    {
+        PhotonNetwork.LeaveRoom();
+    }
+
+    public override void OnLeftRoom()
+    {
+        //We have left the Room, return back to the GameLobby
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Main Menu");
     }
 }
