@@ -65,13 +65,6 @@ public class InLobbyManager : MonoBehaviourPunCallbacks
                 _userNames.text = _userNames.text + "- " + PhotonNetwork.PlayerList[i].NickName + isMasterClient + "\n";
             }
         }
-
-    }
-
-    private void OnPlayerLeftRoom(Player otherPlayer) 
-    {
-        Debug.Log("A player left the room");
-        SetNamesOfLobbyAndConnectedUsers();
     }
 
 
@@ -90,18 +83,12 @@ public class InLobbyManager : MonoBehaviourPunCallbacks
             {
                 if (PhotonNetwork.PlayerList.Length == 2)
                 {
+                    PhotonNetwork.CurrentRoom.IsVisible = false;
+                    PhotonNetwork.CurrentRoom.IsOpen = false;
                     _startGameButton.interactable = true;
                 }
             }
-            //for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
-            //{
-            //    //Show if this player is a Master Client. There can only be one Master Client per Room so use this to define the authoritative logic etc.)
-            //    string isMasterClient = (PhotonNetwork.PlayerList[i].IsMasterClient ? ": Host" : "");
-            //    _userNames.text = _userNames.text + "- " + PhotonNetwork.PlayerList[i].NickName + isMasterClient + "\n";
-            //}
         }
-
-
     }
 
     public void StartGameButton()

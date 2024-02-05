@@ -4,10 +4,12 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameLauncher : MonoBehaviourPunCallbacks
 {
     [SerializeField] private TMP_InputField _usernameChoice;
+    [SerializeField] private Button _joinGameButton;
 
     //Users are separated from each other by gameversion (which allows you to make breaking changes).
     string gameVersion = "1.0";
@@ -82,6 +84,11 @@ public class GameLauncher : MonoBehaviourPunCallbacks
 
     public void ChangeNickName()
     {
-        PhotonNetwork.NickName = _usernameChoice.text;
+        if (_usernameChoice.text != null || _usernameChoice.text != "")
+        {
+            PhotonNetwork.NickName = _usernameChoice.text;
+            _joinGameButton.interactable = true;    
+        }
+        else _joinGameButton.interactable = false;
     }
 }
