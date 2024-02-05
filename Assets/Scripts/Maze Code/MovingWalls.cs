@@ -6,13 +6,26 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class MovingWalls : MonoBehaviour
 {
+    [Tooltip("The collider in the wall.")]
     private Collider _col;
 
+    [Header("Timers & Animations")]
+    [Tooltip("The time the doors are closed and after wich the doors open again.")]
     private float _closeTime = 10;
+
+    [Tooltip("The time the doors are open.")]
     private float _waitTime = 5f;
+
+    [Tooltip("The bool to check if there are still player in the collider.")]
     private bool _playerInArea;
+
+    [Tooltip("The bool to check if the wall is a moving wall.")]
     public bool _isMovingWall;
+
+    [Tooltip("The percetage change for a wall to be a moving wall.")]
     private float chanceToBeMovingWall = 0.2f;
+
+    [Tooltip("The animator of the walls.")]
     [SerializeField] private Animator _animator;
 
     private void Start()

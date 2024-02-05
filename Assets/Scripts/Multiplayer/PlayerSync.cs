@@ -3,14 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+
 public class PlayerSync : MonoBehaviourPun, IPunObservable
 {
-    //List of the scripts that should only be active for the local player (ex. PlayerController, MouseLook etc.)
+    [Tooltip("The scripts that should only be active on the local player and will be disabled on other players.")]
     public MonoBehaviour[] localScripts;
-    //List of the GameObjects that should only be active for the local player (ex. Camera, AudioListener etc.)
+
+    [Tooltip("The gameObjects that should only be active on the local player and will be disabled on other players.")]
     public GameObject[] localObjects;
-    //Values that will be synced over network
+    
+    [Tooltip("The latest position of the other players.")]
     Vector3 latestPos;
+
+    [Tooltip("The latest rotation of the other players.")]
     Quaternion latestRot;
 
     // Use this for initialization

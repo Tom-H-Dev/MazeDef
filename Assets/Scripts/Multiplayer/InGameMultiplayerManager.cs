@@ -6,23 +6,24 @@ using Photon.Realtime;
 using TMPro;
 using UnityEngine.UI;
 
-public class InGameMultiplayerManager : MonoBehaviour
+public class InGameMultiplayerManager : MonoBehaviourPunCallbacks
 {
-    [Tooltip("The prefab of the player that will be spawned when the players go to the maze")]
+    [Tooltip("The prefab of the player that will be spawned when the players go to the maze.")]
     [SerializeField] private GameObject playerPrefab;
 
-    [Tooltip("The list of spawnpoints where the players can spawn")]
+    [Tooltip("The list of spawnpoints where the players can spawn.")]
     [SerializeField] private List<GameObject> spawnPositions = new List<GameObject>();
     private void Start()
     {
-        SetSpawnPoints();
+        GameObject l_player = PhotonNetwork.Instantiate(playerPrefab.name, transform.position, Quaternion.identity, 0);
+        SetSpawnPoints(l_player);
     }
 
-    public void SetSpawnPoints()
+    public void SetSpawnPoints(GameObject l_player)
     {
         for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
         {
-            GameObject l_player = PhotonNetwork.Instantiate(playerPrefab.name, spawnPositions[i].transform.position, Quaternion.identity, 0);
+            l_player.transform.position = spawnPositions[i].transform.position;
             PlayerInfo l_pInfo = l_player.GetComponent<PlayerInfo>();
             l_pInfo.playerName = PhotonNetwork.NickName;
             l_pInfo.id = i + 1;

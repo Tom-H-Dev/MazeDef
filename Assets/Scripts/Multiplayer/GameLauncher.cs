@@ -8,13 +8,20 @@ using UnityEngine.UI;
 
 public class GameLauncher : MonoBehaviourPunCallbacks
 {
+    [Header("User Interface")]
+    [Tooltip("The input field where the player enters their name")]
     [SerializeField] private TMP_InputField _usernameChoice;
+
+    [Tooltip("The button where the player can join a lobby")]
     [SerializeField] private Button _joinGameButton;
 
-    //Users are separated from each other by gameversion (which allows you to make breaking changes).
-    string gameVersion = "1.0";
-    bool joiningRoom = false;
-    // Start is called before the first frame update
+
+    [Header("Game/Lobby Info")]
+    [Tooltip("The version of the game wich the player joins so the player can only join players with the correct game version and not older or newer versions")]
+    private string gameVersion = "1.0";
+
+    [Tooltip("The check if the player is already joining a room or not")]
+    private bool joiningRoom = false;
 
     private void Awake()
     {

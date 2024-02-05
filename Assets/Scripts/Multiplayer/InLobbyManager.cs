@@ -9,14 +9,18 @@ using UnityEngine.UI;
 public class InLobbyManager : MonoBehaviourPunCallbacks
 {
     [Header("Lobby Information")]
-    [Tooltip("If this scene is the lobby scene")]
+    [Tooltip("If this scene is the lobby scene.")]
     [SerializeField] bool isLobby = false;
 
 
-
     [Header("User Interface")]
+    [Tooltip("The TextMeshPro text element where the name of lobby is in.")]
     [SerializeField] private TMP_Text _lobbyName;
+
+    [Tooltip("The TextMeshPro text element where all the names of the players are set in a row to see what players are in the list.")]
     [SerializeField] private TMP_Text _userNames;
+
+    [Tooltip("The button that is in the screen to start the game.")]
     [SerializeField] private Button _startGameButton;
 
 
@@ -31,7 +35,7 @@ public class InLobbyManager : MonoBehaviourPunCallbacks
         PhotonNetwork.LeaveRoom();
     }
 
-    
+
     public override void OnJoinedRoom()
     {
         Debug.Log("You joined the room.");
@@ -43,11 +47,8 @@ public class InLobbyManager : MonoBehaviourPunCallbacks
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
-        Debug.Log("Other players joined the room.");
         if (PhotonNetwork.CurrentRoom.PlayerCount > 1 && PhotonNetwork.IsMasterClient)
         {
-            Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount + "/2 Starting game...");
-
             SetNamesOfLobbyAndConnectedUsers();
         }
     }
@@ -62,7 +63,14 @@ public class InLobbyManager : MonoBehaviourPunCallbacks
             {
                 //Show if this player is a Master Client. There can only be one Master Client per Room so use this to define the authoritative logic etc.)
                 string isMasterClient = (PhotonNetwork.PlayerList[i].IsMasterClient ? ": Host" : "");
-                _userNames.text = _userNames.text + "- " + PhotonNetwork.PlayerList[i].NickName + isMasterClient + "\n";
+                if (PhotonNetwork.NickName == PhotonNetwork.PlayerList[i].NickName)
+                {
+                    _userNames.text = _userNames.text + "- " + PhotonNetwork.PlayerList[i].NickName + isMasterClient +" (You)" + "\n";
+                }
+                else
+                {
+                    _userNames.text = _userNames.text + "- " + PhotonNetwork.PlayerList[i].NickName + isMasterClient + "\n";
+                }
             }
         }
     }

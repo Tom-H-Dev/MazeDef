@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(CharacterController))]
-
-// basic WASD-style movement control
 public class FpsMovement : MonoBehaviour
 {
     [SerializeField] private Camera headCam;
@@ -20,11 +17,18 @@ public class FpsMovement : MonoBehaviour
 
     private float rotationVert = 0;
 
-    private CharacterController charController;
+
+
+    private Rigidbody _rb;
+
+    private Animator _animator;
+
+
 
     void Start()
     {
-        charController = GetComponent<CharacterController>();
+        _rb = GetComponent<Rigidbody>();
+        _animator = GetComponent<Animator>();
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -46,10 +50,14 @@ public class FpsMovement : MonoBehaviour
         movement = Vector3.ClampMagnitude(movement, speed);
 
         movement.y = gravity;
-        movement *= Time.deltaTime;
+        //movement *= Time.deltaTime;
         movement = transform.TransformDirection(movement);
 
-        charController.Move(movement);
+        _rb.velocity = movement;
+
+        if (Input.GetAxis("Horizontal") > 0 || Input.GetAxis("Horizontal") < 0 || Input.GetAxis("Vertical") > 0 || Input.GetAxis("Vertical") <0)
+            _animator.SetBool("isMoving", true);
+        else _animator.SetBool("isMoving", false);
     }
 
     private void RotateCharacter()
@@ -64,4 +72,12 @@ public class FpsMovement : MonoBehaviour
 
         headCam.transform.localEulerAngles = new Vector3(rotationVert, headCam.transform.localEulerAngles.y, 0);
     }
+
+    //private void OnControllerColliderHit(ControllerColliderHit hit)
+    //{
+    //    if (hit.gameObject.TryGetComponent(out PressurePlate l_pressurePlate))
+    //    {
+    //        l_pressurePlate.PressurePlateFunctionality(gameObject);
+    //    }
+    //}
 }
