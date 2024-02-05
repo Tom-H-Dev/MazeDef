@@ -12,11 +12,7 @@ public class InLobbyManager : MonoBehaviourPunCallbacks
     [Tooltip("If this scene is the lobby scene")]
     [SerializeField] bool isLobby = false;
 
-    [Tooltip("The prefab of the player that will be spawned when the players go to the maze")]
-    [SerializeField] private GameObject playerPrefab;
 
-    [Tooltip("The list of spawnpoints where the players can spawn")]
-    [SerializeField] private List<Transform> spawnPositions = new List<Transform>();
 
     [Header("User Interface")]
     [SerializeField] private TMP_Text _lobbyName;
@@ -26,7 +22,6 @@ public class InLobbyManager : MonoBehaviourPunCallbacks
 
     private void Start()
     {
-        SetSpawnPoints();
         _lobbyName.text = PhotonNetwork.PlayerList[0].NickName + "'s Lobby!";
         SetNamesOfLobbyAndConnectedUsers();
     }
@@ -36,16 +31,7 @@ public class InLobbyManager : MonoBehaviourPunCallbacks
         PhotonNetwork.LeaveRoom();
     }
 
-    public void SetSpawnPoints()
-    {
-        if (!isLobby)
-        {
-            for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
-            {
-                PhotonNetwork.Instantiate(playerPrefab.name, spawnPositions[i].position, Quaternion.identity, 0);
-            }
-        }
-    }
+    
     public override void OnJoinedRoom()
     {
         Debug.Log("You joined the room.");
