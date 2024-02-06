@@ -5,6 +5,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class InGameMultiplayerManager : MonoBehaviourPunCallbacks
 {
@@ -31,7 +32,7 @@ public class InGameMultiplayerManager : MonoBehaviourPunCallbacks
             else l_player.transform.position = spawnPositions[1].transform.position;
             PlayerInfo l_pInfo = l_player.GetComponent<PlayerInfo>();
             l_pInfo.playerName = PhotonNetwork.NickName;
-            l_pInfo.id = i + 1;
+            l_pInfo.id = i;
             l_pInfo.spawnpoint = spawnPositions[i].gameObject;
             l_pInfo.playerVisuals[i].SetActive(true);
         }
@@ -47,12 +48,7 @@ public class InGameMultiplayerManager : MonoBehaviourPunCallbacks
 
     public void LeaveRoom()
     {
+        SceneManager.LoadScene("Main Menu");
         PhotonNetwork.LeaveRoom();
-    }
-
-    public override void OnLeftRoom()
-    {
-        //We have left the Room, return back to the GameLobby
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Main Menu");
     }
 }

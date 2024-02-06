@@ -15,11 +15,11 @@ public class MultiplayerFinishState : MonoBehaviourPunCallbacks
         if (other.gameObject.TryGetComponent(out FpsMovement l_player))
         {
             _playersInArea.Add(l_player);
-            if (_playersInArea.Count >= 2)
+            if (_playersInArea.Count >= 3)
             {
                 //Disconnect and load scene
+                PhotonNetwork.LoadLevel("End Screen");
                 //PhotonNetwork.LeaveRoom();
-                //SceneManager.LoadScene("End Screen");
                 Debug.Log("All player in the end screen");
             }
         }

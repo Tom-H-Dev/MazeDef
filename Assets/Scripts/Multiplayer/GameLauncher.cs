@@ -59,7 +59,7 @@ public class GameLauncher : MonoBehaviourPunCallbacks
 
             // #Critical
             // Load the Room Level. 
-            if (_usernameChoice.text == "" || _usernameChoice.text == null) PhotonNetwork.NickName = "Player 1";
+            if (_usernameChoice.text == "" || _usernameChoice.text == null) PhotonNetwork.NickName = "No Name Selected.";
             PhotonNetwork.LoadLevel("Lobby");
 
         }

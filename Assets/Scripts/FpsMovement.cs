@@ -1,6 +1,9 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using Photon.Realtime;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FpsMovement : MonoBehaviour
 {
@@ -8,6 +11,7 @@ public class FpsMovement : MonoBehaviour
 
     public float speed = 6.0f;
     private float gravity = -9.8f;
+    public bool canMove = true;
 
     private float sensitivityHor = 9.0f;
     private float sensitivityVert = 9.0f;
@@ -17,7 +21,7 @@ public class FpsMovement : MonoBehaviour
 
     private float rotationVert = 0;
 
-
+    [SerializeField] private GameObject _pauseMenu;
 
     private Rigidbody _rb;
     private Animator _animator;
@@ -31,13 +35,17 @@ public class FpsMovement : MonoBehaviour
         Cursor.visible = false;
     }
 
-    
+
 
     void Update()
     {
-        MoveCharacter();
-        RotateCharacter();
-        RotateCamera();
+        if (canMove)
+        {
+            MoveCharacter();
+            RotateCharacter();
+            RotateCamera();
+        }
+        OpenPauseMenu();
     }
 
     private void MoveCharacter()
@@ -71,4 +79,50 @@ public class FpsMovement : MonoBehaviour
 
         headCam.transform.localEulerAngles = new Vector3(rotationVert, headCam.transform.localEulerAngles.y, 0);
     }
+
+    private void OpenPauseMenu()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!_pauseMenu.active)
+            {
+                _pauseMenu.SetActive(true);
+                canMove = false;
+                SetCursorSettingsMenu(true);
+            }
+            else
+            {
+                _pauseMenu.SetActive(false);
+                canMove= true;
+                SetCursorSettingsMenu(false);
+            }
+        }
+    }
+
+    public void ChangeCanMove(bool l_value)
+    {
+        canMove = l_value;
+    }
+
+    public void SetCursorSettingsMenu(bool l_openMenu)
+    {
+        if (l_openMenu)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+    }
+
+    public void LeaveRoom()
+    {
+        PhotonNetwork.LeaveRoom();
+        SceneManager.LoadScene("Main Menu");
+    }
+    
+
 }
