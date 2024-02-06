@@ -29,7 +29,9 @@ public class FpsMovement : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
-        _animator = GetComponent<Animator>();
+        _animator = GetComponentInChildren<Animator>();
+        if (_animator is null)
+            Debug.LogError("Animator is " + _animator);
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -122,6 +124,14 @@ public class FpsMovement : MonoBehaviour
     {
         PhotonNetwork.LeaveRoom();
         SceneManager.LoadScene("Main Menu");
+    }
+
+    private void EmoteWheel()
+    {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            _animator.SetTrigger("Dance");
+        }
     }
     
 
