@@ -1087,7 +1087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headCam: {fileID: 5936945196642747624}
-  speed: 6
+  speed: 5
   canMove: 1
   _pauseMenu: {fileID: 5756552464516703062}
 --- !u!114 &2835134292307363155

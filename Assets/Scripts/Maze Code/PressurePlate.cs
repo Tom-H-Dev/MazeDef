@@ -25,10 +25,13 @@ public class PressurePlate : MonoBehaviourPun, IPunObservable
 
     private void OnCollisionEnter(Collision collision)
     {
+        print("1");
         if (collision.gameObject.TryGetComponent(out PlayerInfo l_player))
         {
+            print("2");
             for (int i = 0; i < _animators.Count; i++)
             {
+                print("3");
                 OpenGate(true, _animators[i]);
             }
         }
@@ -67,21 +70,7 @@ public class PressurePlate : MonoBehaviourPun, IPunObservable
 
     public void OpenGate(bool l_isOpen, Animator l_animator)
     {
-        for (int i = 0; i < _animators.Count; i++)
-        {
-            l_animator.SetBool("Open", l_isOpen);
-            isOpen = l_isOpen;
-            _animators[i] = l_animator;
-        }
-    }
-
-    [PunRPC]
-    private void TriggerGateAnimation()
-    {
-        for (int i = 0; i < _animators.Count; i++)
-        {
-            // Trigger the gate animation on all clients except the one that initiated the RPC.
-            _animators[i].SetBool("Open", isOpen);
-        }
+        l_animator.SetBool("Open", l_isOpen);
+        isOpen = l_isOpen;
     }
 }

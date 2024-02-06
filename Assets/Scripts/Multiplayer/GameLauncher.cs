@@ -9,19 +9,23 @@ using UnityEngine.UI;
 public class GameLauncher : MonoBehaviourPunCallbacks
 {
     [Header("User Interface")]
-    [Tooltip("The input field where the player enters their name")]
+    [Tooltip("The input field where the player enters their name.")]
     [SerializeField] private TMP_InputField _usernameChoice;
 
-    [Tooltip("The button where the player can join a lobby")]
+    [Tooltip("The button where the player can join a lobby.")]
     [SerializeField] private Button _joinGameButton;
+
+    [Tooltip("The GameObject which all the loading ui is under.")]
+    [SerializeField] private GameObject _loadingMenu;
 
 
     [Header("Game/Lobby Info")]
-    [Tooltip("The version of the game wich the player joins so the player can only join players with the correct game version and not older or newer versions")]
+    [Tooltip("The version of the game wich the player joins so the player can only join players with the correct game version and not older or newer versions.")]
     private string gameVersion = "1.0";
 
-    [Tooltip("The check if the player is already joining a room or not")]
+    [Tooltip("The check if the player is already joining a room or not.")]
     private bool joiningRoom = false;
+
 
     private void Awake()
     {
@@ -31,11 +35,11 @@ public class GameLauncher : MonoBehaviourPunCallbacks
     public override void OnDisconnected(DisconnectCause cause)
     {
         Debug.Log("OnFailedToConnectToPhoton. StatusCode: " + cause.ToString() + " ServerAddress: " + PhotonNetwork.ServerAddress);
+        _loadingMenu.SetActive(false);
     }
 
     public override void OnConnectedToMaster()
     {
-        Debug.Log("OnConnectedToMaster");
         //After we connected to Master server, join the Lobby
         if (joiningRoom)
         {
@@ -55,8 +59,6 @@ public class GameLauncher : MonoBehaviourPunCallbacks
         // #Critical: We only load if we are the first player, else we rely on  PhotonNetwork.AutomaticallySyncScene to sync our instance scene.
         if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
         {
-            Debug.Log("We load the 'Room for 1' ");
-
             // #Critical
             // Load the Room Level. 
             if (_usernameChoice.text == "" || _usernameChoice.text == null) PhotonNetwork.NickName = "No Name Selected.";
@@ -74,7 +76,7 @@ public class GameLauncher : MonoBehaviourPunCallbacks
     {
         // keep track of the will to join a room, because when we come back from the game we will get a callback that we are connected, so we need to know what to do then
         joiningRoom = true;
-
+        _loadingMenu.SetActive(true);
         // we check if we are connected or not, we join if we are , else we initiate the connection to the server.
         if (PhotonNetwork.IsConnected)
         {
