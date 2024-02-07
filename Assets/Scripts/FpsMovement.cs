@@ -54,18 +54,20 @@ public class FpsMovement : MonoBehaviour
 
     private void MoveCharacter()
     {
+        //Input
         float deltaX = Input.GetAxis("Horizontal") * speed;
         float deltaZ = Input.GetAxis("Vertical") * speed;
 
+        //Movement calculation
         Vector3 movement = new Vector3(deltaX, 0, deltaZ);
         movement = Vector3.ClampMagnitude(movement, speed);
 
         movement.y = gravity;
-        //movement *= Time.deltaTime;
         movement = transform.TransformDirection(movement);
 
         _rb.velocity = movement;
 
+        //If the player is moving set the audio and the animations
         if (deltaX != 0 || deltaZ != 0)
         {
             _animator.SetBool("isMoving", true);
@@ -135,6 +137,9 @@ public class FpsMovement : MonoBehaviour
         SceneManager.LoadScene("Main Menu");
     }
 
+    /// <summary>
+    /// Emote is broken so function not included in game anymore
+    /// </summary>
     private void EmoteWheel()
     {
         if (Input.GetKeyDown(KeyCode.G))

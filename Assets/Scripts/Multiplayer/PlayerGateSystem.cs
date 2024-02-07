@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
-using Unity.VisualScripting.Antlr3.Runtime;
 
+//Class not used
 public class PlayerGateSystem : MonoBehaviourPun
 {
     private bool isOpen = false;

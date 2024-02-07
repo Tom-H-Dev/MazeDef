@@ -11,6 +11,10 @@ public class MainMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
+    /// <summary>
+    /// Switches scene to the scene name that is in the parameter
+    /// </summary>
+    /// <param name="l_sceneName"></The name of the scene the game needs to switch to>
     public void SceneSwitch(string l_sceneName)
     {
         SceneManager.LoadScene(l_sceneName);

@@ -8,7 +8,6 @@ public class PlayerInfo : MonoBehaviour
     public int id;
     public string playerName;
     public GameObject spawnpoint;
-
     public List<GameObject> playerVisuals;
     
 }

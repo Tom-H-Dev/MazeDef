@@ -19,8 +19,10 @@ public class PressurePlate : MonoBehaviourPun, IPunObservable
     [Tooltip("The animator for the door that the corresponding pressure polate should open.")]
     [SerializeField] private List<Animator> _animators;
 
+    [Tooltip("The Audio Source for the pressure plate.")]
     private AudioSource _audioSource;
 
+    [Tooltip("The clip that will be played when the player stands on the pressure plate.")]
     [SerializeField] private AudioClip _sfx;
 
     private void Start()
@@ -28,12 +30,19 @@ public class PressurePlate : MonoBehaviourPun, IPunObservable
         _audioSource = GetComponent<AudioSource>();
     }
 
+    /// <summary>
+    /// If the player is standind on the pressure plate
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.TryGetComponent(out PlayerInfo l_player))
         {
+            //Play sound effect
             _audioSource.clip = _sfx;
             _audioSource.Play();
+
+            //Open Gate animations
             for (int i = 0; i < _animators.Count; i++)
             {
                 OpenGate(true, _animators[i]);
@@ -41,6 +50,9 @@ public class PressurePlate : MonoBehaviourPun, IPunObservable
             }
         }
     }
+    /// <summary>
+    /// If the player moves off the pressure plate the gate will be closed
+    /// </summary>
     private void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.TryGetComponent(out PlayerInfo l_player))
@@ -52,6 +64,8 @@ public class PressurePlate : MonoBehaviourPun, IPunObservable
         }
     }
 
+    //The function to sync the local player with the other players on the network
+    //Is part of the IPunObservable interface
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if (stream.IsWriting)
@@ -72,7 +86,11 @@ public class PressurePlate : MonoBehaviourPun, IPunObservable
 
         }
     }
-
+    /// <summary>
+    /// Sets the bool for the animator
+    /// </summary>
+    /// <param name="l_isOpen"></ The bool if the gate is open or closed>
+    /// <param name="l_animator"></The specific animator that neds to be open>
     public void OpenGate(bool l_isOpen, Animator l_animator)
     {
         l_animator.SetBool("Open", l_isOpen);

@@ -65,7 +65,7 @@ public class InLobbyManager : MonoBehaviourPunCallbacks
                 string isMasterClient = (PhotonNetwork.PlayerList[i].IsMasterClient ? ": Host" : "");
                 if (PhotonNetwork.NickName == PhotonNetwork.PlayerList[i].NickName)
                 {
-                    _userNames.text = _userNames.text + "- " + PhotonNetwork.PlayerList[i].NickName + isMasterClient +" (You)" + "\n";
+                    _userNames.text = _userNames.text + "- " + PhotonNetwork.PlayerList[i].NickName + isMasterClient + " (You)" + "\n";
                 }
                 else
                 {
@@ -87,6 +87,7 @@ public class InLobbyManager : MonoBehaviourPunCallbacks
     {
         if (isLobby)
         {
+            //The lobby will be closed then there are enough players in the lobby
             if (PhotonNetwork.IsMasterClient)
             {
                 if (PhotonNetwork.PlayerList.Length == 2)
@@ -102,6 +103,7 @@ public class InLobbyManager : MonoBehaviourPunCallbacks
                     _startGameButton.interactable = false;
                 }
             }
+            //Will update the list of players in the lobby
             SetNamesOfLobbyAndConnectedUsers();
         }
     }

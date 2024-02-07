@@ -11,6 +11,4 @@ public class GateSounds : MonoBehaviour
         _source.clip = _clip;
         _source.Play();
     }
-
-    
 }

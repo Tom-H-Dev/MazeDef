@@ -22,14 +22,20 @@ public class InGameMultiplayerManager : MonoBehaviourPunCallbacks
         SetSpawnPoints(l_player);
     }
 
+    /// <summary>
+    /// Sets the correct spawn points and some further data for each of the players
+    /// </summary>
+    /// <param name="l_player"></The gameobject for the player>
     public void SetSpawnPoints(GameObject l_player)
     {
         for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
         {
-            //l_player.transform.position = spawnPositions[i].transform.position;
+            //Spawnpoints set
             if (PhotonNetwork.IsMasterClient)
                 l_player.transform.position = spawnPositions[0].transform.position;
             else l_player.transform.position = spawnPositions[1].transform.position;
+
+            //Further data set
             PlayerInfo l_pInfo = l_player.GetComponent<PlayerInfo>();
             l_pInfo.playerName = PhotonNetwork.NickName;
             l_pInfo.id = i;
@@ -37,6 +43,9 @@ public class InGameMultiplayerManager : MonoBehaviourPunCallbacks
         }
     }
 
+    /// <summary>
+    /// Leave the room when there are not enough players in the room
+    /// </summary>
     private void Update()
     {
         if (PhotonNetwork.PlayerList.Length != 2)

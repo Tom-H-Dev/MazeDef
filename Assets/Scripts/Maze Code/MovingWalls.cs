@@ -28,10 +28,12 @@ public class MovingWalls : MonoBehaviour
     [Tooltip("The animator of the walls.")]
     [SerializeField] private Animator _animator;
 
+
     private void Start()
     {
         _col = GetComponent<Collider>();
 
+        //Random change to be moving wall
         float rand = Random.Range(0.0f, 1.0f);
         if (rand <= chanceToBeMovingWall)
         {
@@ -58,13 +60,14 @@ public class MovingWalls : MonoBehaviour
     }
     private IEnumerator MoveWall()
     {
-
+        //Random change to be moving wall
         float rand = Random.Range(0.0f, 1.0f);
         if (rand <= chanceToBeMovingWall)
         {
             _isMovingWall = true;
             yield break;
         }
+        //If the player is not the collider of the wall
         if (!_playerInArea)
         {
             _animator.SetTrigger("OpenWall");
@@ -77,7 +80,7 @@ public class MovingWalls : MonoBehaviour
                 yield return new WaitForSeconds(_closeTime);
             }
         }
+        //Resets the routine
         StartCoroutine(MoveWall());
-
     }
 }

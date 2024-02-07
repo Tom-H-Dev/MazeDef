@@ -26,6 +26,7 @@ public class PlayerSync : MonoBehaviourPun, IPunObservable
     {
         if (photonView.IsMine)
         {
+            //Pause menu
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 if (!_pauseMenu.active)

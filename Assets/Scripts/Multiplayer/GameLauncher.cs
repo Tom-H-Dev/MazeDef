@@ -91,8 +91,12 @@ public class GameLauncher : MonoBehaviourPunCallbacks
         }
     }
 
+    /// <summary>
+    /// This function is called by the Input Field for the username input.
+    /// </summary>
     public void ChangeNickName()
     {
+        //Sets the button interactable and the nickname when nickname is made.
         if (_usernameChoice.text != null || _usernameChoice.text != "")
         {
             PhotonNetwork.NickName = _usernameChoice.text;
