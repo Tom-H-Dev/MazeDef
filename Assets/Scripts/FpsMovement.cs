@@ -25,11 +25,13 @@ public class FpsMovement : MonoBehaviour
 
     private Rigidbody _rb;
     private Animator _animator;
+    private AudioSource _audioSource;
 
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
         _animator = GetComponentInChildren<Animator>();
+        _audioSource = GetComponent<AudioSource>();
         if (_animator is null)
             Debug.LogError("Animator is " + _animator);
 
@@ -65,8 +67,15 @@ public class FpsMovement : MonoBehaviour
         _rb.velocity = movement;
 
         if (deltaX != 0 || deltaZ != 0)
+        {
             _animator.SetBool("isMoving", true);
-        else _animator.SetBool("isMoving", false);
+            _audioSource.Play();
+        }
+        else
+        {
+            _animator.SetBool("isMoving", false);
+            _audioSource.Stop();
+        }
     }
 
     private void RotateCharacter()

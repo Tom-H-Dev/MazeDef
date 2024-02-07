@@ -34,7 +34,6 @@ public class InGameMultiplayerManager : MonoBehaviourPunCallbacks
             l_pInfo.playerName = PhotonNetwork.NickName;
             l_pInfo.id = i;
             l_pInfo.spawnpoint = spawnPositions[i].gameObject;
-            l_pInfo.playerVisuals[i].SetActive(true);
         }
     }
 
