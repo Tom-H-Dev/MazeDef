@@ -2,7 +2,6 @@ using Photon.Pun;
 using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 
 public enum PlayerIDs
@@ -20,19 +19,25 @@ public class PressurePlate : MonoBehaviourPun, IPunObservable
     [Tooltip("The animator for the door that the corresponding pressure polate should open.")]
     [SerializeField] private List<Animator> _animators;
 
-    private PlayerGateSystem _gateSystem;
-    private bool isOpen = false;
+    private AudioSource _audioSource;
+
+    [SerializeField] private AudioClip _sfx;
+
+    private void Start()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
-        print("1");
         if (collision.gameObject.TryGetComponent(out PlayerInfo l_player))
         {
-            print("2");
+            _audioSource.clip = _sfx;
+            _audioSource.Play();
             for (int i = 0; i < _animators.Count; i++)
             {
-                print("3");
                 OpenGate(true, _animators[i]);
+                _animators[i].gameObject.GetComponent<GateSounds>().OnPlayAudio();
             }
         }
     }
@@ -71,6 +76,5 @@ public class PressurePlate : MonoBehaviourPun, IPunObservable
     public void OpenGate(bool l_isOpen, Animator l_animator)
     {
         l_animator.SetBool("Open", l_isOpen);
-        isOpen = l_isOpen;
     }
 }
