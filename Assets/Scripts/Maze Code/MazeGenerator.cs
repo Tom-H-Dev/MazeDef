@@ -4,47 +4,67 @@ using UnityEngine;
 
 public abstract class MazeGenerator : MonoBehaviour
 {
-    //Used to obtain the Row and Column from the private variables 
-    public int RowCount { get { return mMazeRows; } }
-    public int ColumnCount { get { return mMazeColumns; } }
-    private int mMazeRows;
-    private int mMazeColumns;
-    public Tile[,] mMaze;
-    //A constructor that makes the rows and columns non-zero
-    //and instantiates a new MazeCell at that specific rank and range
-    public MazeGenerator(int rows, int columns)
+    //Used to obtain the Row and Column from the private variables .
+    [Tooltip("The amount of rows that are in the maze.")]
+    public int RowCount { get { return _mazeRows; } }
+
+    [Tooltip("The amount of columns that are in the maze.")]
+    public int ColumnCount { get { return _mazeColumns; } }
+
+    [Tooltip("The amount of rows.")]
+    private int _mazeRows;
+
+    [Tooltip("The amount of culums.")]
+    private int _mazeColumns;
+
+    [Tooltip("A 2d array of all tiles of the maze.")]
+    public Tile[,] mazeTiles;
+
+    //A constructor that makes the rows and columns non-zero.
+    //and instantiates a new MazeCell at that specific rank and range.
+    public MazeGenerator(int l_rows, int l_columns)
     {
-        mMazeRows = Mathf.Abs(rows);
-        mMazeColumns = Mathf.Abs(columns);
-        if (mMazeRows == 0)
+        _mazeRows = Mathf.Abs(l_rows);
+        _mazeColumns = Mathf.Abs(l_columns);
+        //If there is no size set always set to a 1x1 maze.
+        if (_mazeRows == 0)
         {
-            mMazeRows = 1;
+            _mazeRows = 1;
         }
-        if (mMazeColumns == 0)
+        if (_mazeColumns == 0)
         {
-            mMazeColumns = 1;
+            _mazeColumns = 1;
         }
-        mMaze = new Tile[rows, columns];
-        for (int row = 0; row < rows; row++)
+
+        mazeTiles = new Tile[l_rows, l_columns];
+        //Generates all the tiles in the 2d array of mMaze.
+        for (int row = 0; row < l_rows; row++)
         {
-            for (int column = 0; column < columns; column++)
+            for (int column = 0; column < l_columns; column++)
             {
-                mMaze[row, column] = new Tile();
+                mazeTiles[row, column] = new Tile();
             }
         }
     }
-    //called by the algorithim class to start the algorithm
+    //called by the algorithim class to start the algorithm.
     public abstract void GenerateMaze();
 
-    public Tile GetMazeCell(int row, int column)
+    /// <summary>
+    /// Returns a specific tile
+    /// </summary>
+    /// <param name="l_row"></ Which row the tile is in.>
+    /// <param name="l_column"></Which column thte tile is in.>
+    /// <returns></returns>
+    /// <exception cref="System.ArgumentOutOfRangeException"></exception>
+    public Tile GetMazeCell(int l_row, int l_column)
     {
-        if (row >= 0 && column >= 0 && row < mMazeRows && column < mMazeColumns)
+        if (l_row >= 0 && l_column >= 0 && l_row < _mazeRows && l_column < _mazeColumns)
         {
-            return mMaze[row, column];
+            return mazeTiles[l_row, l_column];
         }
         else
         {
-            Debug.Log(row + " " + column);
+            Debug.Log(l_row + " " + l_column);
             throw new System.ArgumentOutOfRangeException();
         }
     }
