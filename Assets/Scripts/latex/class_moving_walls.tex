@@ -1,0 +1,116 @@
+\doxysection{Moving\+Walls Class Reference}
+\hypertarget{class_moving_walls}{}\label{class_moving_walls}\index{MovingWalls@{MovingWalls}}
+Inheritance diagram for Moving\+Walls\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_moving_walls}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_moving_walls_a8e71635d4db55aad37d02dfa0271d13d}{\+\_\+is\+Moving\+Wall}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_moving_walls_a204377ed125c08ccf3444aef252cf523}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_moving_walls_a8ce8922b3a94b7a0a58e89ad46a6e31e}{On\+Trigger\+Enter}} (Collider other)
+\item 
+void \mbox{\hyperlink{class_moving_walls_a937e388c58d4934d52345a895ac435ca}{On\+Trigger\+Exit}} (Collider other)
+\item 
+IEnumerator \mbox{\hyperlink{class_moving_walls_a98dc167cf2d5b6c28d820a5c181ba805}{Move\+Wall}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Collider \mbox{\hyperlink{class_moving_walls_abad1014557575d608a548e2d86b47b32}{\+\_\+col}}
+\item 
+float \mbox{\hyperlink{class_moving_walls_ae8158071d1a97cb8b230491032437d35}{\+\_\+close\+Time}} = 10
+\item 
+float \mbox{\hyperlink{class_moving_walls_adb237f80521454731478ccc79d38c727}{\+\_\+wait\+Time}} = 5f
+\item 
+bool \mbox{\hyperlink{class_moving_walls_a940825fbd0a3560289c92781ef22bf1b}{\+\_\+player\+In\+Area}}
+\item 
+float \mbox{\hyperlink{class_moving_walls_a8d2c41bb0609b17df8af644dfcb14b90}{chance\+To\+Be\+Moving\+Wall}} = 0.\+2f
+\item 
+Animator \mbox{\hyperlink{class_moving_walls_ae5d75f9a0309c822c3733934f898070a}{\+\_\+animator}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_moving_walls_a98dc167cf2d5b6c28d820a5c181ba805}\index{MovingWalls@{MovingWalls}!MoveWall@{MoveWall}}
+\index{MoveWall@{MoveWall}!MovingWalls@{MovingWalls}}
+\doxysubsubsection{\texorpdfstring{MoveWall()}{MoveWall()}}
+{\footnotesize\ttfamily \label{class_moving_walls_a98dc167cf2d5b6c28d820a5c181ba805} 
+IEnumerator Moving\+Walls.\+Move\+Wall (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_moving_walls_a8ce8922b3a94b7a0a58e89ad46a6e31e}\index{MovingWalls@{MovingWalls}!OnTriggerEnter@{OnTriggerEnter}}
+\index{OnTriggerEnter@{OnTriggerEnter}!MovingWalls@{MovingWalls}}
+\doxysubsubsection{\texorpdfstring{OnTriggerEnter()}{OnTriggerEnter()}}
+{\footnotesize\ttfamily \label{class_moving_walls_a8ce8922b3a94b7a0a58e89ad46a6e31e} 
+void Moving\+Walls.\+On\+Trigger\+Enter (\begin{DoxyParamCaption}\item[{Collider}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_moving_walls_a937e388c58d4934d52345a895ac435ca}\index{MovingWalls@{MovingWalls}!OnTriggerExit@{OnTriggerExit}}
+\index{OnTriggerExit@{OnTriggerExit}!MovingWalls@{MovingWalls}}
+\doxysubsubsection{\texorpdfstring{OnTriggerExit()}{OnTriggerExit()}}
+{\footnotesize\ttfamily \label{class_moving_walls_a937e388c58d4934d52345a895ac435ca} 
+void Moving\+Walls.\+On\+Trigger\+Exit (\begin{DoxyParamCaption}\item[{Collider}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_moving_walls_a204377ed125c08ccf3444aef252cf523}\index{MovingWalls@{MovingWalls}!Start@{Start}}
+\index{Start@{Start}!MovingWalls@{MovingWalls}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_moving_walls_a204377ed125c08ccf3444aef252cf523} 
+void Moving\+Walls.\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_moving_walls_ae5d75f9a0309c822c3733934f898070a}\index{MovingWalls@{MovingWalls}!\_animator@{\_animator}}
+\index{\_animator@{\_animator}!MovingWalls@{MovingWalls}}
+\doxysubsubsection{\texorpdfstring{\_animator}{\_animator}}
+{\footnotesize\ttfamily \label{class_moving_walls_ae5d75f9a0309c822c3733934f898070a} 
+Animator Moving\+Walls.\+\_\+animator\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_moving_walls_ae8158071d1a97cb8b230491032437d35}\index{MovingWalls@{MovingWalls}!\_closeTime@{\_closeTime}}
+\index{\_closeTime@{\_closeTime}!MovingWalls@{MovingWalls}}
+\doxysubsubsection{\texorpdfstring{\_closeTime}{\_closeTime}}
+{\footnotesize\ttfamily \label{class_moving_walls_ae8158071d1a97cb8b230491032437d35} 
+float Moving\+Walls.\+\_\+close\+Time = 10\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_moving_walls_abad1014557575d608a548e2d86b47b32}\index{MovingWalls@{MovingWalls}!\_col@{\_col}}
+\index{\_col@{\_col}!MovingWalls@{MovingWalls}}
+\doxysubsubsection{\texorpdfstring{\_col}{\_col}}
+{\footnotesize\ttfamily \label{class_moving_walls_abad1014557575d608a548e2d86b47b32} 
+Collider Moving\+Walls.\+\_\+col\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_moving_walls_a8e71635d4db55aad37d02dfa0271d13d}\index{MovingWalls@{MovingWalls}!\_isMovingWall@{\_isMovingWall}}
+\index{\_isMovingWall@{\_isMovingWall}!MovingWalls@{MovingWalls}}
+\doxysubsubsection{\texorpdfstring{\_isMovingWall}{\_isMovingWall}}
+{\footnotesize\ttfamily \label{class_moving_walls_a8e71635d4db55aad37d02dfa0271d13d} 
+bool Moving\+Walls.\+\_\+is\+Moving\+Wall}
+
+\Hypertarget{class_moving_walls_a940825fbd0a3560289c92781ef22bf1b}\index{MovingWalls@{MovingWalls}!\_playerInArea@{\_playerInArea}}
+\index{\_playerInArea@{\_playerInArea}!MovingWalls@{MovingWalls}}
+\doxysubsubsection{\texorpdfstring{\_playerInArea}{\_playerInArea}}
+{\footnotesize\ttfamily \label{class_moving_walls_a940825fbd0a3560289c92781ef22bf1b} 
+bool Moving\+Walls.\+\_\+player\+In\+Area\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_moving_walls_adb237f80521454731478ccc79d38c727}\index{MovingWalls@{MovingWalls}!\_waitTime@{\_waitTime}}
+\index{\_waitTime@{\_waitTime}!MovingWalls@{MovingWalls}}
+\doxysubsubsection{\texorpdfstring{\_waitTime}{\_waitTime}}
+{\footnotesize\ttfamily \label{class_moving_walls_adb237f80521454731478ccc79d38c727} 
+float Moving\+Walls.\+\_\+wait\+Time = 5f\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_moving_walls_a8d2c41bb0609b17df8af644dfcb14b90}\index{MovingWalls@{MovingWalls}!chanceToBeMovingWall@{chanceToBeMovingWall}}
+\index{chanceToBeMovingWall@{chanceToBeMovingWall}!MovingWalls@{MovingWalls}}
+\doxysubsubsection{\texorpdfstring{chanceToBeMovingWall}{chanceToBeMovingWall}}
+{\footnotesize\ttfamily \label{class_moving_walls_a8d2c41bb0609b17df8af644dfcb14b90} 
+float Moving\+Walls.\+chance\+To\+Be\+Moving\+Wall = 0.\+2f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Maze Code/\mbox{\hyperlink{_moving_walls_8cs}{Moving\+Walls.\+cs}}\end{DoxyCompactItemize}

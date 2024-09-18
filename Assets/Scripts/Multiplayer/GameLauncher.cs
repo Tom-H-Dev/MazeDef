@@ -9,6 +9,9 @@ using UnityEngine.UI;
 public class GameLauncher : MonoBehaviourPunCallbacks
 {
     [Header("User Interface")]
+    /// <summary>
+    /// The input field where the player enters their name.
+    /// </summary>
     [Tooltip("The input field where the player enters their name.")]
     [SerializeField] private TMP_InputField _usernameChoice;
 

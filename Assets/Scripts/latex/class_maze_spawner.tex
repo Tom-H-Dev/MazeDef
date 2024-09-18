@@ -1,0 +1,161 @@
+\doxysection{Maze\+Spawner Class Reference}
+\hypertarget{class_maze_spawner}{}\label{class_maze_spawner}\index{MazeSpawner@{MazeSpawner}}
+Inheritance diagram for Maze\+Spawner\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_maze_spawner}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_maze_spawner_acadafaa361730e6a5f1758e16e5150c0}{Maze\+Generation\+Algorithm}} \{ \mbox{\hyperlink{class_maze_spawner_acadafaa361730e6a5f1758e16e5150c0a8bf58d1725928e7030f0c115f80da682}{Pure\+Recursive}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_maze_spawner_acadafaa361730e6a5f1758e16e5150c0}{Maze\+Generation\+Algorithm}} \mbox{\hyperlink{class_maze_spawner_a2c126f5a02f5de001e8ef5956f940850}{algorithm}} = \mbox{\hyperlink{class_maze_spawner_acadafaa361730e6a5f1758e16e5150c0a8bf58d1725928e7030f0c115f80da682}{Maze\+Generation\+Algorithm.\+Pure\+Recursive}}
+\item 
+bool \mbox{\hyperlink{class_maze_spawner_a23461629ad658e2d38c3b31a8d6638e8}{full\+Random}} = false
+\item 
+int \mbox{\hyperlink{class_maze_spawner_add1b2c86b8cce5eb3e4086e1eaefe054}{random\+Seed}} = 12345
+\item 
+Game\+Object \mbox{\hyperlink{class_maze_spawner_a7a9ad8f722ed2c08410f63f7140d99e4}{wall\+Prefab}} = null
+\item 
+Game\+Object \mbox{\hyperlink{class_maze_spawner_a636a385a9a66971d8f00ac413399843b}{pillar\+Prefab}} = null
+\item 
+Game\+Object \mbox{\hyperlink{class_maze_spawner_ab18b8304bd17f89ad7964478c300a6f1}{finish\+Prefab}} = null
+\item 
+int \mbox{\hyperlink{class_maze_spawner_a350105f245fe4e870cd7a83c53845ea2}{rows}}
+\item 
+int \mbox{\hyperlink{class_maze_spawner_a110eb858b0d78f442f5a33f9c1177b6e}{columns}}
+\item 
+float \mbox{\hyperlink{class_maze_spawner_a7059d621a198099ab5c2b41d0612e343}{tile\+Width}} = 5
+\item 
+float \mbox{\hyperlink{class_maze_spawner_a224d03d3148975e642471069fe0b84e4}{tile\+Height}} = 5
+\item 
+bool \mbox{\hyperlink{class_maze_spawner_a5749e122d50160c935ebdd57dfa18f4d}{add\+Gaps}} = false
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_maze_spawner_aa73d4b62e6853d253d2a7c5a4264e0b1}{Start}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_maze_generator}{Maze\+Generator}} \mbox{\hyperlink{class_maze_spawner_ac4f11e6f034f0e2dc6c4f88925db081c}{\+\_\+maze\+Generator}} = null
+\item 
+\mbox{\hyperlink{class_tile}{Tile}} \mbox{\hyperlink{class_maze_spawner_a85eb96f2c85fd2831a67b6a1e27e677a}{\+\_\+tile}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_maze_spawner_acadafaa361730e6a5f1758e16e5150c0}\index{MazeSpawner@{MazeSpawner}!MazeGenerationAlgorithm@{MazeGenerationAlgorithm}}
+\index{MazeGenerationAlgorithm@{MazeGenerationAlgorithm}!MazeSpawner@{MazeSpawner}}
+\doxysubsubsection{\texorpdfstring{MazeGenerationAlgorithm}{MazeGenerationAlgorithm}}
+{\footnotesize\ttfamily \label{class_maze_spawner_acadafaa361730e6a5f1758e16e5150c0} 
+enum \mbox{\hyperlink{class_maze_spawner_acadafaa361730e6a5f1758e16e5150c0}{Maze\+Spawner.\+Maze\+Generation\+Algorithm}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PureRecursive@{PureRecursive}!MazeSpawner@{MazeSpawner}}\index{MazeSpawner@{MazeSpawner}!PureRecursive@{PureRecursive}}}\Hypertarget{class_maze_spawner_acadafaa361730e6a5f1758e16e5150c0a8bf58d1725928e7030f0c115f80da682}\label{class_maze_spawner_acadafaa361730e6a5f1758e16e5150c0} 
+Pure\+Recursive&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_maze_spawner_aa73d4b62e6853d253d2a7c5a4264e0b1}\index{MazeSpawner@{MazeSpawner}!Start@{Start}}
+\index{Start@{Start}!MazeSpawner@{MazeSpawner}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_maze_spawner_aa73d4b62e6853d253d2a7c5a4264e0b1} 
+void Maze\+Spawner.\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_maze_spawner_ac4f11e6f034f0e2dc6c4f88925db081c}\index{MazeSpawner@{MazeSpawner}!\_mazeGenerator@{\_mazeGenerator}}
+\index{\_mazeGenerator@{\_mazeGenerator}!MazeSpawner@{MazeSpawner}}
+\doxysubsubsection{\texorpdfstring{\_mazeGenerator}{\_mazeGenerator}}
+{\footnotesize\ttfamily \label{class_maze_spawner_ac4f11e6f034f0e2dc6c4f88925db081c} 
+\mbox{\hyperlink{class_maze_generator}{Maze\+Generator}} Maze\+Spawner.\+\_\+maze\+Generator = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_maze_spawner_a85eb96f2c85fd2831a67b6a1e27e677a}\index{MazeSpawner@{MazeSpawner}!\_tile@{\_tile}}
+\index{\_tile@{\_tile}!MazeSpawner@{MazeSpawner}}
+\doxysubsubsection{\texorpdfstring{\_tile}{\_tile}}
+{\footnotesize\ttfamily \label{class_maze_spawner_a85eb96f2c85fd2831a67b6a1e27e677a} 
+\mbox{\hyperlink{class_tile}{Tile}} Maze\+Spawner.\+\_\+tile\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_maze_spawner_a5749e122d50160c935ebdd57dfa18f4d}\index{MazeSpawner@{MazeSpawner}!addGaps@{addGaps}}
+\index{addGaps@{addGaps}!MazeSpawner@{MazeSpawner}}
+\doxysubsubsection{\texorpdfstring{addGaps}{addGaps}}
+{\footnotesize\ttfamily \label{class_maze_spawner_a5749e122d50160c935ebdd57dfa18f4d} 
+bool Maze\+Spawner.\+add\+Gaps = false}
+
+\Hypertarget{class_maze_spawner_a2c126f5a02f5de001e8ef5956f940850}\index{MazeSpawner@{MazeSpawner}!algorithm@{algorithm}}
+\index{algorithm@{algorithm}!MazeSpawner@{MazeSpawner}}
+\doxysubsubsection{\texorpdfstring{algorithm}{algorithm}}
+{\footnotesize\ttfamily \label{class_maze_spawner_a2c126f5a02f5de001e8ef5956f940850} 
+\mbox{\hyperlink{class_maze_spawner_acadafaa361730e6a5f1758e16e5150c0}{Maze\+Generation\+Algorithm}} Maze\+Spawner.\+algorithm = \mbox{\hyperlink{class_maze_spawner_acadafaa361730e6a5f1758e16e5150c0a8bf58d1725928e7030f0c115f80da682}{Maze\+Generation\+Algorithm.\+Pure\+Recursive}}}
+
+\Hypertarget{class_maze_spawner_a110eb858b0d78f442f5a33f9c1177b6e}\index{MazeSpawner@{MazeSpawner}!columns@{columns}}
+\index{columns@{columns}!MazeSpawner@{MazeSpawner}}
+\doxysubsubsection{\texorpdfstring{columns}{columns}}
+{\footnotesize\ttfamily \label{class_maze_spawner_a110eb858b0d78f442f5a33f9c1177b6e} 
+int Maze\+Spawner.\+columns}
+
+\Hypertarget{class_maze_spawner_ab18b8304bd17f89ad7964478c300a6f1}\index{MazeSpawner@{MazeSpawner}!finishPrefab@{finishPrefab}}
+\index{finishPrefab@{finishPrefab}!MazeSpawner@{MazeSpawner}}
+\doxysubsubsection{\texorpdfstring{finishPrefab}{finishPrefab}}
+{\footnotesize\ttfamily \label{class_maze_spawner_ab18b8304bd17f89ad7964478c300a6f1} 
+Game\+Object Maze\+Spawner.\+finish\+Prefab = null}
+
+\Hypertarget{class_maze_spawner_a23461629ad658e2d38c3b31a8d6638e8}\index{MazeSpawner@{MazeSpawner}!fullRandom@{fullRandom}}
+\index{fullRandom@{fullRandom}!MazeSpawner@{MazeSpawner}}
+\doxysubsubsection{\texorpdfstring{fullRandom}{fullRandom}}
+{\footnotesize\ttfamily \label{class_maze_spawner_a23461629ad658e2d38c3b31a8d6638e8} 
+bool Maze\+Spawner.\+full\+Random = false}
+
+\Hypertarget{class_maze_spawner_a636a385a9a66971d8f00ac413399843b}\index{MazeSpawner@{MazeSpawner}!pillarPrefab@{pillarPrefab}}
+\index{pillarPrefab@{pillarPrefab}!MazeSpawner@{MazeSpawner}}
+\doxysubsubsection{\texorpdfstring{pillarPrefab}{pillarPrefab}}
+{\footnotesize\ttfamily \label{class_maze_spawner_a636a385a9a66971d8f00ac413399843b} 
+Game\+Object Maze\+Spawner.\+pillar\+Prefab = null}
+
+\Hypertarget{class_maze_spawner_add1b2c86b8cce5eb3e4086e1eaefe054}\index{MazeSpawner@{MazeSpawner}!randomSeed@{randomSeed}}
+\index{randomSeed@{randomSeed}!MazeSpawner@{MazeSpawner}}
+\doxysubsubsection{\texorpdfstring{randomSeed}{randomSeed}}
+{\footnotesize\ttfamily \label{class_maze_spawner_add1b2c86b8cce5eb3e4086e1eaefe054} 
+int Maze\+Spawner.\+random\+Seed = 12345}
+
+\Hypertarget{class_maze_spawner_a350105f245fe4e870cd7a83c53845ea2}\index{MazeSpawner@{MazeSpawner}!rows@{rows}}
+\index{rows@{rows}!MazeSpawner@{MazeSpawner}}
+\doxysubsubsection{\texorpdfstring{rows}{rows}}
+{\footnotesize\ttfamily \label{class_maze_spawner_a350105f245fe4e870cd7a83c53845ea2} 
+int Maze\+Spawner.\+rows}
+
+\Hypertarget{class_maze_spawner_a224d03d3148975e642471069fe0b84e4}\index{MazeSpawner@{MazeSpawner}!tileHeight@{tileHeight}}
+\index{tileHeight@{tileHeight}!MazeSpawner@{MazeSpawner}}
+\doxysubsubsection{\texorpdfstring{tileHeight}{tileHeight}}
+{\footnotesize\ttfamily \label{class_maze_spawner_a224d03d3148975e642471069fe0b84e4} 
+float Maze\+Spawner.\+tile\+Height = 5}
+
+\Hypertarget{class_maze_spawner_a7059d621a198099ab5c2b41d0612e343}\index{MazeSpawner@{MazeSpawner}!tileWidth@{tileWidth}}
+\index{tileWidth@{tileWidth}!MazeSpawner@{MazeSpawner}}
+\doxysubsubsection{\texorpdfstring{tileWidth}{tileWidth}}
+{\footnotesize\ttfamily \label{class_maze_spawner_a7059d621a198099ab5c2b41d0612e343} 
+float Maze\+Spawner.\+tile\+Width = 5}
+
+\Hypertarget{class_maze_spawner_a7a9ad8f722ed2c08410f63f7140d99e4}\index{MazeSpawner@{MazeSpawner}!wallPrefab@{wallPrefab}}
+\index{wallPrefab@{wallPrefab}!MazeSpawner@{MazeSpawner}}
+\doxysubsubsection{\texorpdfstring{wallPrefab}{wallPrefab}}
+{\footnotesize\ttfamily \label{class_maze_spawner_a7a9ad8f722ed2c08410f63f7140d99e4} 
+Game\+Object Maze\+Spawner.\+wall\+Prefab = null}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Maze Code/\mbox{\hyperlink{_maze_spawner_8cs}{Maze\+Spawner.\+cs}}\end{DoxyCompactItemize}

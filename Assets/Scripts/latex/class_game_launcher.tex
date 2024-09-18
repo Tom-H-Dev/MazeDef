@@ -1,0 +1,140 @@
+\doxysection{Game\+Launcher Class Reference}
+\hypertarget{class_game_launcher}{}\label{class_game_launcher}\index{GameLauncher@{GameLauncher}}
+Inheritance diagram for Game\+Launcher\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_launcher}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_game_launcher_a021c580a3ed0319c1f37efc71adeb4fc}{On\+Disconnected}} (Disconnect\+Cause cause)
+\item 
+override void \mbox{\hyperlink{class_game_launcher_a2344505b13b4ed8db2c5a0fb506f3ad1}{On\+Connected\+To\+Master}} ()
+\item 
+override void \mbox{\hyperlink{class_game_launcher_a5bfd7b9fd8d775e24a3d77aa78f7bb84}{On\+Join\+Random\+Failed}} (short return\+Code, string message)
+\item 
+override void \mbox{\hyperlink{class_game_launcher_a557617aa4166ade00e95409e55bfb1f4}{On\+Joined\+Room}} ()
+\item 
+void \mbox{\hyperlink{class_game_launcher_a6d7813d9da0889a47929bc2679b39114}{Connect}} ()
+\begin{DoxyCompactList}\small\item\em Start the connection process. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_launcher_aa4b7ac898d54a81501af91f5c8fdac25}{Change\+Nick\+Name}} ()
+\begin{DoxyCompactList}\small\item\em This function is called by the Input Field for the username input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_launcher_ab447fa977eed967203bb85e23d1548da}{Awake}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TMP\+\_\+\+Input\+Field \mbox{\hyperlink{class_game_launcher_a3af603724aa740b0e48b5870aac3a965}{\+\_\+username\+Choice}}
+\begin{DoxyCompactList}\small\item\em The input field where the player enters their name. \end{DoxyCompactList}\item 
+Button \mbox{\hyperlink{class_game_launcher_ab8943f26b5dbda1bf6c3b0e18b173cc7}{\+\_\+join\+Game\+Button}}
+\item 
+Game\+Object \mbox{\hyperlink{class_game_launcher_a4bce6d33e8b8df418f72cd1edb65ee9b}{\+\_\+loading\+Menu}}
+\item 
+string \mbox{\hyperlink{class_game_launcher_ad26f8c6cbc2f9492f3ba5167fbd49d52}{game\+Version}} = "{}1.\+0"{}
+\item 
+bool \mbox{\hyperlink{class_game_launcher_ae5546bec0138f8b529ffff4c4c9059cf}{joining\+Room}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_launcher_ab447fa977eed967203bb85e23d1548da}\index{GameLauncher@{GameLauncher}!Awake@{Awake}}
+\index{Awake@{Awake}!GameLauncher@{GameLauncher}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_game_launcher_ab447fa977eed967203bb85e23d1548da} 
+void Game\+Launcher.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_game_launcher_aa4b7ac898d54a81501af91f5c8fdac25}\index{GameLauncher@{GameLauncher}!ChangeNickName@{ChangeNickName}}
+\index{ChangeNickName@{ChangeNickName}!GameLauncher@{GameLauncher}}
+\doxysubsubsection{\texorpdfstring{ChangeNickName()}{ChangeNickName()}}
+{\footnotesize\ttfamily \label{class_game_launcher_aa4b7ac898d54a81501af91f5c8fdac25} 
+void Game\+Launcher.\+Change\+Nick\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This function is called by the Input Field for the username input. 
+
+\Hypertarget{class_game_launcher_a6d7813d9da0889a47929bc2679b39114}\index{GameLauncher@{GameLauncher}!Connect@{Connect}}
+\index{Connect@{Connect}!GameLauncher@{GameLauncher}}
+\doxysubsubsection{\texorpdfstring{Connect()}{Connect()}}
+{\footnotesize\ttfamily \label{class_game_launcher_a6d7813d9da0889a47929bc2679b39114} 
+void Game\+Launcher.\+Connect (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Start the connection process. 
+
+
+\begin{DoxyItemize}
+\item If already connected, we attempt joining a random room
+\item if not yet connected, Connect this application instance to Photon Cloud Network 
+\end{DoxyItemize}\Hypertarget{class_game_launcher_a2344505b13b4ed8db2c5a0fb506f3ad1}\index{GameLauncher@{GameLauncher}!OnConnectedToMaster@{OnConnectedToMaster}}
+\index{OnConnectedToMaster@{OnConnectedToMaster}!GameLauncher@{GameLauncher}}
+\doxysubsubsection{\texorpdfstring{OnConnectedToMaster()}{OnConnectedToMaster()}}
+{\footnotesize\ttfamily \label{class_game_launcher_a2344505b13b4ed8db2c5a0fb506f3ad1} 
+override void Game\+Launcher.\+On\+Connected\+To\+Master (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_game_launcher_a021c580a3ed0319c1f37efc71adeb4fc}\index{GameLauncher@{GameLauncher}!OnDisconnected@{OnDisconnected}}
+\index{OnDisconnected@{OnDisconnected}!GameLauncher@{GameLauncher}}
+\doxysubsubsection{\texorpdfstring{OnDisconnected()}{OnDisconnected()}}
+{\footnotesize\ttfamily \label{class_game_launcher_a021c580a3ed0319c1f37efc71adeb4fc} 
+override void Game\+Launcher.\+On\+Disconnected (\begin{DoxyParamCaption}\item[{Disconnect\+Cause}]{cause}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_game_launcher_a557617aa4166ade00e95409e55bfb1f4}\index{GameLauncher@{GameLauncher}!OnJoinedRoom@{OnJoinedRoom}}
+\index{OnJoinedRoom@{OnJoinedRoom}!GameLauncher@{GameLauncher}}
+\doxysubsubsection{\texorpdfstring{OnJoinedRoom()}{OnJoinedRoom()}}
+{\footnotesize\ttfamily \label{class_game_launcher_a557617aa4166ade00e95409e55bfb1f4} 
+override void Game\+Launcher.\+On\+Joined\+Room (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_game_launcher_a5bfd7b9fd8d775e24a3d77aa78f7bb84}\index{GameLauncher@{GameLauncher}!OnJoinRandomFailed@{OnJoinRandomFailed}}
+\index{OnJoinRandomFailed@{OnJoinRandomFailed}!GameLauncher@{GameLauncher}}
+\doxysubsubsection{\texorpdfstring{OnJoinRandomFailed()}{OnJoinRandomFailed()}}
+{\footnotesize\ttfamily \label{class_game_launcher_a5bfd7b9fd8d775e24a3d77aa78f7bb84} 
+override void Game\+Launcher.\+On\+Join\+Random\+Failed (\begin{DoxyParamCaption}\item[{short}]{return\+Code}{, }\item[{string}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_game_launcher_ab8943f26b5dbda1bf6c3b0e18b173cc7}\index{GameLauncher@{GameLauncher}!\_joinGameButton@{\_joinGameButton}}
+\index{\_joinGameButton@{\_joinGameButton}!GameLauncher@{GameLauncher}}
+\doxysubsubsection{\texorpdfstring{\_joinGameButton}{\_joinGameButton}}
+{\footnotesize\ttfamily \label{class_game_launcher_ab8943f26b5dbda1bf6c3b0e18b173cc7} 
+Button Game\+Launcher.\+\_\+join\+Game\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_game_launcher_a4bce6d33e8b8df418f72cd1edb65ee9b}\index{GameLauncher@{GameLauncher}!\_loadingMenu@{\_loadingMenu}}
+\index{\_loadingMenu@{\_loadingMenu}!GameLauncher@{GameLauncher}}
+\doxysubsubsection{\texorpdfstring{\_loadingMenu}{\_loadingMenu}}
+{\footnotesize\ttfamily \label{class_game_launcher_a4bce6d33e8b8df418f72cd1edb65ee9b} 
+Game\+Object Game\+Launcher.\+\_\+loading\+Menu\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_game_launcher_a3af603724aa740b0e48b5870aac3a965}\index{GameLauncher@{GameLauncher}!\_usernameChoice@{\_usernameChoice}}
+\index{\_usernameChoice@{\_usernameChoice}!GameLauncher@{GameLauncher}}
+\doxysubsubsection{\texorpdfstring{\_usernameChoice}{\_usernameChoice}}
+{\footnotesize\ttfamily \label{class_game_launcher_a3af603724aa740b0e48b5870aac3a965} 
+TMP\+\_\+\+Input\+Field Game\+Launcher.\+\_\+username\+Choice\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The input field where the player enters their name. 
+
+\Hypertarget{class_game_launcher_ad26f8c6cbc2f9492f3ba5167fbd49d52}\index{GameLauncher@{GameLauncher}!gameVersion@{gameVersion}}
+\index{gameVersion@{gameVersion}!GameLauncher@{GameLauncher}}
+\doxysubsubsection{\texorpdfstring{gameVersion}{gameVersion}}
+{\footnotesize\ttfamily \label{class_game_launcher_ad26f8c6cbc2f9492f3ba5167fbd49d52} 
+string Game\+Launcher.\+game\+Version = "{}1.\+0"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_game_launcher_ae5546bec0138f8b529ffff4c4c9059cf}\index{GameLauncher@{GameLauncher}!joiningRoom@{joiningRoom}}
+\index{joiningRoom@{joiningRoom}!GameLauncher@{GameLauncher}}
+\doxysubsubsection{\texorpdfstring{joiningRoom}{joiningRoom}}
+{\footnotesize\ttfamily \label{class_game_launcher_ae5546bec0138f8b529ffff4c4c9059cf} 
+bool Game\+Launcher.\+joining\+Room = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Multiplayer/\mbox{\hyperlink{_game_launcher_8cs}{Game\+Launcher.\+cs}}\end{DoxyCompactItemize}

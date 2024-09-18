@@ -1,0 +1,219 @@
+\doxysection{Fps\+Movement Class Reference}
+\hypertarget{class_fps_movement}{}\label{class_fps_movement}\index{FpsMovement@{FpsMovement}}
+Inheritance diagram for Fps\+Movement\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_fps_movement}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_fps_movement_a6b1f82135c7ea0ead6cdf557e4dadd81}{Change\+Can\+Move}} (bool l\+\_\+value)
+\item 
+void \mbox{\hyperlink{class_fps_movement_a410b367fd54f87b7165bf2a3c158477d}{Set\+Cursor\+Settings\+Menu}} (bool l\+\_\+open\+Menu)
+\item 
+void \mbox{\hyperlink{class_fps_movement_a9fcba75b8d9d2133d5a864dc172f0eee}{Leave\+Room}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_fps_movement_ada87c0719aa3f32eb43c66ff6187e4ef}{speed}} = 6.\+0f
+\item 
+bool \mbox{\hyperlink{class_fps_movement_ad6d25bd0e54fe0b93fc0ab9c8207bd55}{can\+Move}} = true
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_fps_movement_ae25a8e14696f5e92f54a67185fe4c9ad}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_fps_movement_a5e18d5ad72bee831275ac3db72bd3ad1}{Update}} ()
+\item 
+void \mbox{\hyperlink{class_fps_movement_a5bda2bd43ae2a778367569f6c800fc2d}{Move\+Character}} ()
+\item 
+void \mbox{\hyperlink{class_fps_movement_af338b423961600d188b2eb6a97a02b06}{Rotate\+Character}} ()
+\item 
+void \mbox{\hyperlink{class_fps_movement_a9e3e1fa3ed5750d5229b0664b93da753}{Rotate\+Camera}} ()
+\item 
+void \mbox{\hyperlink{class_fps_movement_a4705d1f06de8233d86942079999f5021}{Open\+Pause\+Menu}} ()
+\item 
+void \mbox{\hyperlink{class_fps_movement_a7711b08a97f93ec16a393fe2e99a9997}{Emote\+Wheel}} ()
+\begin{DoxyCompactList}\small\item\em Emote is broken so function not included in game anymore. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Camera \mbox{\hyperlink{class_fps_movement_a4e72a71765998fd64447e75ceda3b09f}{head\+Cam}}
+\item 
+float \mbox{\hyperlink{class_fps_movement_a253fff0361b63537f69dfeaff3de3e6e}{gravity}} = -\/9.\+8f
+\item 
+float \mbox{\hyperlink{class_fps_movement_a6175b72ac13b3a801c67cf4e5648fb60}{sensitivity\+Hor}} = 9.\+0f
+\item 
+float \mbox{\hyperlink{class_fps_movement_ae89c2d963670f9fb8103a36af61c70a5}{sensitivity\+Vert}} = 9.\+0f
+\item 
+float \mbox{\hyperlink{class_fps_movement_ad240798afe662da329e891befb8f725e}{minimum\+Vert}} = -\/45.\+0f
+\item 
+float \mbox{\hyperlink{class_fps_movement_a6818f76bcc0dfa443f2d7e9be7b2d0d3}{maximum\+Vert}} = 45.\+0f
+\item 
+float \mbox{\hyperlink{class_fps_movement_a00e028af11a05b5b816f800f4373a660}{rotation\+Vert}} = 0
+\item 
+Game\+Object \mbox{\hyperlink{class_fps_movement_a04463b4534dd63b84839c5883ae07684}{\+\_\+pause\+Menu}}
+\item 
+Rigidbody \mbox{\hyperlink{class_fps_movement_afbd1c6ad324536a935065e9bc6734ea9}{\+\_\+rb}}
+\item 
+Animator \mbox{\hyperlink{class_fps_movement_aaf8f4c7efa26eb9f3027bd33a7b9fa6f}{\+\_\+animator}}
+\item 
+Audio\+Source \mbox{\hyperlink{class_fps_movement_aa8e758d47d53f0e223190a553ffa9f5d}{\+\_\+audio\+Source}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_fps_movement_a6b1f82135c7ea0ead6cdf557e4dadd81}\index{FpsMovement@{FpsMovement}!ChangeCanMove@{ChangeCanMove}}
+\index{ChangeCanMove@{ChangeCanMove}!FpsMovement@{FpsMovement}}
+\doxysubsubsection{\texorpdfstring{ChangeCanMove()}{ChangeCanMove()}}
+{\footnotesize\ttfamily \label{class_fps_movement_a6b1f82135c7ea0ead6cdf557e4dadd81} 
+void Fps\+Movement.\+Change\+Can\+Move (\begin{DoxyParamCaption}\item[{bool}]{l\+\_\+value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_fps_movement_a7711b08a97f93ec16a393fe2e99a9997}\index{FpsMovement@{FpsMovement}!EmoteWheel@{EmoteWheel}}
+\index{EmoteWheel@{EmoteWheel}!FpsMovement@{FpsMovement}}
+\doxysubsubsection{\texorpdfstring{EmoteWheel()}{EmoteWheel()}}
+{\footnotesize\ttfamily \label{class_fps_movement_a7711b08a97f93ec16a393fe2e99a9997} 
+void Fps\+Movement.\+Emote\+Wheel (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Emote is broken so function not included in game anymore. 
+
+\Hypertarget{class_fps_movement_a9fcba75b8d9d2133d5a864dc172f0eee}\index{FpsMovement@{FpsMovement}!LeaveRoom@{LeaveRoom}}
+\index{LeaveRoom@{LeaveRoom}!FpsMovement@{FpsMovement}}
+\doxysubsubsection{\texorpdfstring{LeaveRoom()}{LeaveRoom()}}
+{\footnotesize\ttfamily \label{class_fps_movement_a9fcba75b8d9d2133d5a864dc172f0eee} 
+void Fps\+Movement.\+Leave\+Room (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_fps_movement_a5bda2bd43ae2a778367569f6c800fc2d}\index{FpsMovement@{FpsMovement}!MoveCharacter@{MoveCharacter}}
+\index{MoveCharacter@{MoveCharacter}!FpsMovement@{FpsMovement}}
+\doxysubsubsection{\texorpdfstring{MoveCharacter()}{MoveCharacter()}}
+{\footnotesize\ttfamily \label{class_fps_movement_a5bda2bd43ae2a778367569f6c800fc2d} 
+void Fps\+Movement.\+Move\+Character (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_fps_movement_a4705d1f06de8233d86942079999f5021}\index{FpsMovement@{FpsMovement}!OpenPauseMenu@{OpenPauseMenu}}
+\index{OpenPauseMenu@{OpenPauseMenu}!FpsMovement@{FpsMovement}}
+\doxysubsubsection{\texorpdfstring{OpenPauseMenu()}{OpenPauseMenu()}}
+{\footnotesize\ttfamily \label{class_fps_movement_a4705d1f06de8233d86942079999f5021} 
+void Fps\+Movement.\+Open\+Pause\+Menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_fps_movement_a9e3e1fa3ed5750d5229b0664b93da753}\index{FpsMovement@{FpsMovement}!RotateCamera@{RotateCamera}}
+\index{RotateCamera@{RotateCamera}!FpsMovement@{FpsMovement}}
+\doxysubsubsection{\texorpdfstring{RotateCamera()}{RotateCamera()}}
+{\footnotesize\ttfamily \label{class_fps_movement_a9e3e1fa3ed5750d5229b0664b93da753} 
+void Fps\+Movement.\+Rotate\+Camera (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_fps_movement_af338b423961600d188b2eb6a97a02b06}\index{FpsMovement@{FpsMovement}!RotateCharacter@{RotateCharacter}}
+\index{RotateCharacter@{RotateCharacter}!FpsMovement@{FpsMovement}}
+\doxysubsubsection{\texorpdfstring{RotateCharacter()}{RotateCharacter()}}
+{\footnotesize\ttfamily \label{class_fps_movement_af338b423961600d188b2eb6a97a02b06} 
+void Fps\+Movement.\+Rotate\+Character (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_fps_movement_a410b367fd54f87b7165bf2a3c158477d}\index{FpsMovement@{FpsMovement}!SetCursorSettingsMenu@{SetCursorSettingsMenu}}
+\index{SetCursorSettingsMenu@{SetCursorSettingsMenu}!FpsMovement@{FpsMovement}}
+\doxysubsubsection{\texorpdfstring{SetCursorSettingsMenu()}{SetCursorSettingsMenu()}}
+{\footnotesize\ttfamily \label{class_fps_movement_a410b367fd54f87b7165bf2a3c158477d} 
+void Fps\+Movement.\+Set\+Cursor\+Settings\+Menu (\begin{DoxyParamCaption}\item[{bool}]{l\+\_\+open\+Menu}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_fps_movement_ae25a8e14696f5e92f54a67185fe4c9ad}\index{FpsMovement@{FpsMovement}!Start@{Start}}
+\index{Start@{Start}!FpsMovement@{FpsMovement}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_fps_movement_ae25a8e14696f5e92f54a67185fe4c9ad} 
+void Fps\+Movement.\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_fps_movement_a5e18d5ad72bee831275ac3db72bd3ad1}\index{FpsMovement@{FpsMovement}!Update@{Update}}
+\index{Update@{Update}!FpsMovement@{FpsMovement}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_fps_movement_a5e18d5ad72bee831275ac3db72bd3ad1} 
+void Fps\+Movement.\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_fps_movement_aaf8f4c7efa26eb9f3027bd33a7b9fa6f}\index{FpsMovement@{FpsMovement}!\_animator@{\_animator}}
+\index{\_animator@{\_animator}!FpsMovement@{FpsMovement}}
+\doxysubsubsection{\texorpdfstring{\_animator}{\_animator}}
+{\footnotesize\ttfamily \label{class_fps_movement_aaf8f4c7efa26eb9f3027bd33a7b9fa6f} 
+Animator Fps\+Movement.\+\_\+animator\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_fps_movement_aa8e758d47d53f0e223190a553ffa9f5d}\index{FpsMovement@{FpsMovement}!\_audioSource@{\_audioSource}}
+\index{\_audioSource@{\_audioSource}!FpsMovement@{FpsMovement}}
+\doxysubsubsection{\texorpdfstring{\_audioSource}{\_audioSource}}
+{\footnotesize\ttfamily \label{class_fps_movement_aa8e758d47d53f0e223190a553ffa9f5d} 
+Audio\+Source Fps\+Movement.\+\_\+audio\+Source\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_fps_movement_a04463b4534dd63b84839c5883ae07684}\index{FpsMovement@{FpsMovement}!\_pauseMenu@{\_pauseMenu}}
+\index{\_pauseMenu@{\_pauseMenu}!FpsMovement@{FpsMovement}}
+\doxysubsubsection{\texorpdfstring{\_pauseMenu}{\_pauseMenu}}
+{\footnotesize\ttfamily \label{class_fps_movement_a04463b4534dd63b84839c5883ae07684} 
+Game\+Object Fps\+Movement.\+\_\+pause\+Menu\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_fps_movement_afbd1c6ad324536a935065e9bc6734ea9}\index{FpsMovement@{FpsMovement}!\_rb@{\_rb}}
+\index{\_rb@{\_rb}!FpsMovement@{FpsMovement}}
+\doxysubsubsection{\texorpdfstring{\_rb}{\_rb}}
+{\footnotesize\ttfamily \label{class_fps_movement_afbd1c6ad324536a935065e9bc6734ea9} 
+Rigidbody Fps\+Movement.\+\_\+rb\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_fps_movement_ad6d25bd0e54fe0b93fc0ab9c8207bd55}\index{FpsMovement@{FpsMovement}!canMove@{canMove}}
+\index{canMove@{canMove}!FpsMovement@{FpsMovement}}
+\doxysubsubsection{\texorpdfstring{canMove}{canMove}}
+{\footnotesize\ttfamily \label{class_fps_movement_ad6d25bd0e54fe0b93fc0ab9c8207bd55} 
+bool Fps\+Movement.\+can\+Move = true}
+
+\Hypertarget{class_fps_movement_a253fff0361b63537f69dfeaff3de3e6e}\index{FpsMovement@{FpsMovement}!gravity@{gravity}}
+\index{gravity@{gravity}!FpsMovement@{FpsMovement}}
+\doxysubsubsection{\texorpdfstring{gravity}{gravity}}
+{\footnotesize\ttfamily \label{class_fps_movement_a253fff0361b63537f69dfeaff3de3e6e} 
+float Fps\+Movement.\+gravity = -\/9.\+8f\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_fps_movement_a4e72a71765998fd64447e75ceda3b09f}\index{FpsMovement@{FpsMovement}!headCam@{headCam}}
+\index{headCam@{headCam}!FpsMovement@{FpsMovement}}
+\doxysubsubsection{\texorpdfstring{headCam}{headCam}}
+{\footnotesize\ttfamily \label{class_fps_movement_a4e72a71765998fd64447e75ceda3b09f} 
+Camera Fps\+Movement.\+head\+Cam\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_fps_movement_a6818f76bcc0dfa443f2d7e9be7b2d0d3}\index{FpsMovement@{FpsMovement}!maximumVert@{maximumVert}}
+\index{maximumVert@{maximumVert}!FpsMovement@{FpsMovement}}
+\doxysubsubsection{\texorpdfstring{maximumVert}{maximumVert}}
+{\footnotesize\ttfamily \label{class_fps_movement_a6818f76bcc0dfa443f2d7e9be7b2d0d3} 
+float Fps\+Movement.\+maximum\+Vert = 45.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_fps_movement_ad240798afe662da329e891befb8f725e}\index{FpsMovement@{FpsMovement}!minimumVert@{minimumVert}}
+\index{minimumVert@{minimumVert}!FpsMovement@{FpsMovement}}
+\doxysubsubsection{\texorpdfstring{minimumVert}{minimumVert}}
+{\footnotesize\ttfamily \label{class_fps_movement_ad240798afe662da329e891befb8f725e} 
+float Fps\+Movement.\+minimum\+Vert = -\/45.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_fps_movement_a00e028af11a05b5b816f800f4373a660}\index{FpsMovement@{FpsMovement}!rotationVert@{rotationVert}}
+\index{rotationVert@{rotationVert}!FpsMovement@{FpsMovement}}
+\doxysubsubsection{\texorpdfstring{rotationVert}{rotationVert}}
+{\footnotesize\ttfamily \label{class_fps_movement_a00e028af11a05b5b816f800f4373a660} 
+float Fps\+Movement.\+rotation\+Vert = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_fps_movement_a6175b72ac13b3a801c67cf4e5648fb60}\index{FpsMovement@{FpsMovement}!sensitivityHor@{sensitivityHor}}
+\index{sensitivityHor@{sensitivityHor}!FpsMovement@{FpsMovement}}
+\doxysubsubsection{\texorpdfstring{sensitivityHor}{sensitivityHor}}
+{\footnotesize\ttfamily \label{class_fps_movement_a6175b72ac13b3a801c67cf4e5648fb60} 
+float Fps\+Movement.\+sensitivity\+Hor = 9.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_fps_movement_ae89c2d963670f9fb8103a36af61c70a5}\index{FpsMovement@{FpsMovement}!sensitivityVert@{sensitivityVert}}
+\index{sensitivityVert@{sensitivityVert}!FpsMovement@{FpsMovement}}
+\doxysubsubsection{\texorpdfstring{sensitivityVert}{sensitivityVert}}
+{\footnotesize\ttfamily \label{class_fps_movement_ae89c2d963670f9fb8103a36af61c70a5} 
+float Fps\+Movement.\+sensitivity\+Vert = 9.\+0f\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_fps_movement_ada87c0719aa3f32eb43c66ff6187e4ef}\index{FpsMovement@{FpsMovement}!speed@{speed}}
+\index{speed@{speed}!FpsMovement@{FpsMovement}}
+\doxysubsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily \label{class_fps_movement_ada87c0719aa3f32eb43c66ff6187e4ef} 
+float Fps\+Movement.\+speed = 6.\+0f}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_fps_movement_8cs}{Fps\+Movement.\+cs}}\end{DoxyCompactItemize}

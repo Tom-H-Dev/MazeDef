@@ -1,0 +1,123 @@
+\doxysection{Maze\+Generator Class Reference}
+\hypertarget{class_maze_generator}{}\label{class_maze_generator}\index{MazeGenerator@{MazeGenerator}}
+Inheritance diagram for Maze\+Generator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_maze_generator}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_maze_generator_a87927636b9b8188fdb044727cd9bcbdc}{Maze\+Generator}} (int l\+\_\+rows, int l\+\_\+columns)
+\item 
+void \mbox{\hyperlink{class_maze_generator_a659a4b2020bc6babd91f861fb91a0bb8}{Generate\+Maze}} ()
+\item 
+\mbox{\hyperlink{class_tile}{Tile}} \mbox{\hyperlink{class_maze_generator_acf480c0d5f8d092531b9bbcbd2d33d3f}{Get\+Maze\+Cell}} (int l\+\_\+row, int l\+\_\+column)
+\begin{DoxyCompactList}\small\item\em Returns a specific tile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tile}{Tile}}\mbox{[},\mbox{]} \mbox{\hyperlink{class_maze_generator_a0fb3f1e06a20dbd4e7f5e786ef72c765}{maze\+Tiles}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_maze_generator_ad2896d2dd3a99901166eef521401d0f3}{Row\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+int \mbox{\hyperlink{class_maze_generator_a533eea1e05bafe50374769185410b366}{Column\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_maze_generator_a21198bf406331bc8d2fe808f422afd50}{\+\_\+maze\+Rows}}
+\item 
+int \mbox{\hyperlink{class_maze_generator_a0c43872cd047f56526efb51f092fce23}{\+\_\+maze\+Columns}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_maze_generator_a87927636b9b8188fdb044727cd9bcbdc}\index{MazeGenerator@{MazeGenerator}!MazeGenerator@{MazeGenerator}}
+\index{MazeGenerator@{MazeGenerator}!MazeGenerator@{MazeGenerator}}
+\doxysubsubsection{\texorpdfstring{MazeGenerator()}{MazeGenerator()}}
+{\footnotesize\ttfamily \label{class_maze_generator_a87927636b9b8188fdb044727cd9bcbdc} 
+Maze\+Generator.\+Maze\+Generator (\begin{DoxyParamCaption}\item[{int}]{l\+\_\+rows}{, }\item[{int}]{l\+\_\+columns}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_maze_generator_a659a4b2020bc6babd91f861fb91a0bb8}\index{MazeGenerator@{MazeGenerator}!GenerateMaze@{GenerateMaze}}
+\index{GenerateMaze@{GenerateMaze}!MazeGenerator@{MazeGenerator}}
+\doxysubsubsection{\texorpdfstring{GenerateMaze()}{GenerateMaze()}}
+{\footnotesize\ttfamily \label{class_maze_generator_a659a4b2020bc6babd91f861fb91a0bb8} 
+void Maze\+Generator.\+Generate\+Maze (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+\Hypertarget{class_maze_generator_acf480c0d5f8d092531b9bbcbd2d33d3f}\index{MazeGenerator@{MazeGenerator}!GetMazeCell@{GetMazeCell}}
+\index{GetMazeCell@{GetMazeCell}!MazeGenerator@{MazeGenerator}}
+\doxysubsubsection{\texorpdfstring{GetMazeCell()}{GetMazeCell()}}
+{\footnotesize\ttfamily \label{class_maze_generator_acf480c0d5f8d092531b9bbcbd2d33d3f} 
+\mbox{\hyperlink{class_tile}{Tile}} Maze\+Generator.\+Get\+Maze\+Cell (\begin{DoxyParamCaption}\item[{int}]{l\+\_\+row}{, }\item[{int}]{l\+\_\+column}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a specific tile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l\+\_\+row} & \texorpdfstring{$<$}{<}/ Which row the tile is in.\texorpdfstring{$>$}{>} 
+\begin{DoxyParams}{Parameters}
+{\em l\+\_\+column} & \texorpdfstring{$<$}{<}/\+Which column thte tile is in.\texorpdfstring{$>$}{>} \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em System.\+Argument\+Out\+Of\+Range\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\\
+\hline
+\end{DoxyParams}
+\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_maze_generator_a0c43872cd047f56526efb51f092fce23}\index{MazeGenerator@{MazeGenerator}!\_mazeColumns@{\_mazeColumns}}
+\index{\_mazeColumns@{\_mazeColumns}!MazeGenerator@{MazeGenerator}}
+\doxysubsubsection{\texorpdfstring{\_mazeColumns}{\_mazeColumns}}
+{\footnotesize\ttfamily \label{class_maze_generator_a0c43872cd047f56526efb51f092fce23} 
+int Maze\+Generator.\+\_\+maze\+Columns\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_maze_generator_a21198bf406331bc8d2fe808f422afd50}\index{MazeGenerator@{MazeGenerator}!\_mazeRows@{\_mazeRows}}
+\index{\_mazeRows@{\_mazeRows}!MazeGenerator@{MazeGenerator}}
+\doxysubsubsection{\texorpdfstring{\_mazeRows}{\_mazeRows}}
+{\footnotesize\ttfamily \label{class_maze_generator_a21198bf406331bc8d2fe808f422afd50} 
+int Maze\+Generator.\+\_\+maze\+Rows\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_maze_generator_a0fb3f1e06a20dbd4e7f5e786ef72c765}\index{MazeGenerator@{MazeGenerator}!mazeTiles@{mazeTiles}}
+\index{mazeTiles@{mazeTiles}!MazeGenerator@{MazeGenerator}}
+\doxysubsubsection{\texorpdfstring{mazeTiles}{mazeTiles}}
+{\footnotesize\ttfamily \label{class_maze_generator_a0fb3f1e06a20dbd4e7f5e786ef72c765} 
+\mbox{\hyperlink{class_tile}{Tile}} \mbox{[},\mbox{]} Maze\+Generator.\+maze\+Tiles}
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_maze_generator_a533eea1e05bafe50374769185410b366}\index{MazeGenerator@{MazeGenerator}!ColumnCount@{ColumnCount}}
+\index{ColumnCount@{ColumnCount}!MazeGenerator@{MazeGenerator}}
+\doxysubsubsection{\texorpdfstring{ColumnCount}{ColumnCount}}
+{\footnotesize\ttfamily \label{class_maze_generator_a533eea1e05bafe50374769185410b366} 
+int Maze\+Generator.\+Column\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+\Hypertarget{class_maze_generator_ad2896d2dd3a99901166eef521401d0f3}\index{MazeGenerator@{MazeGenerator}!RowCount@{RowCount}}
+\index{RowCount@{RowCount}!MazeGenerator@{MazeGenerator}}
+\doxysubsubsection{\texorpdfstring{RowCount}{RowCount}}
+{\footnotesize\ttfamily \label{class_maze_generator_ad2896d2dd3a99901166eef521401d0f3} 
+int Maze\+Generator.\+Row\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Maze Code/\mbox{\hyperlink{_maze_generator_8cs}{Maze\+Generator.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,104 @@
+\doxysection{Recursive\+Maze\+Algorithm Class Reference}
+\hypertarget{class_recursive_maze_algorithm}{}\label{class_recursive_maze_algorithm}\index{RecursiveMazeAlgorithm@{RecursiveMazeAlgorithm}}
+Inheritance diagram for Recursive\+Maze\+Algorithm\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_recursive_maze_algorithm}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_recursive_maze_algorithm_a89f4b78116fa1c3eef6bf3ef60949c02}{Recursive\+Maze\+Algorithm}} (int l\+\_\+rows, int l\+\_\+columns)
+\begin{DoxyCompactList}\small\item\em Calls the \doxylink{class_maze_generator}{Maze\+Generator} contructor and sets sets the rows and columns in the \doxylink{class_maze_generator}{Maze\+Generator} script. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_recursive_maze_algorithm_ad39446bde6269c1957b090491dbe56c0}{Generate\+Maze}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_maze_generator}{Maze\+Generator}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_maze_generator_a87927636b9b8188fdb044727cd9bcbdc}{Maze\+Generator}} (int l\+\_\+rows, int l\+\_\+columns)
+\item 
+void \mbox{\hyperlink{class_maze_generator_a659a4b2020bc6babd91f861fb91a0bb8}{Generate\+Maze}} ()
+\item 
+\mbox{\hyperlink{class_tile}{Tile}} \mbox{\hyperlink{class_maze_generator_acf480c0d5f8d092531b9bbcbd2d33d3f}{Get\+Maze\+Cell}} (int l\+\_\+row, int l\+\_\+column)
+\begin{DoxyCompactList}\small\item\em Returns a specific tile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_recursive_maze_algorithm_aafa0a285711080b3ce90f75a3bb40267}{Visit\+Cell}} (int l\+\_\+row, int l\+\_\+column, \mbox{\hyperlink{_tile_8cs_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} l\+\_\+move\+Made)
+\begin{DoxyCompactList}\small\item\em Generates the maze and will make a path trough the maze. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_maze_generator}{Maze\+Generator}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tile}{Tile}}\mbox{[},\mbox{]} \mbox{\hyperlink{class_maze_generator_a0fb3f1e06a20dbd4e7f5e786ef72c765}{maze\+Tiles}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_maze_generator}{Maze\+Generator}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_maze_generator_ad2896d2dd3a99901166eef521401d0f3}{Row\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+int \mbox{\hyperlink{class_maze_generator_a533eea1e05bafe50374769185410b366}{Column\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_recursive_maze_algorithm_a89f4b78116fa1c3eef6bf3ef60949c02}\index{RecursiveMazeAlgorithm@{RecursiveMazeAlgorithm}!RecursiveMazeAlgorithm@{RecursiveMazeAlgorithm}}
+\index{RecursiveMazeAlgorithm@{RecursiveMazeAlgorithm}!RecursiveMazeAlgorithm@{RecursiveMazeAlgorithm}}
+\doxysubsubsection{\texorpdfstring{RecursiveMazeAlgorithm()}{RecursiveMazeAlgorithm()}}
+{\footnotesize\ttfamily \label{class_recursive_maze_algorithm_a89f4b78116fa1c3eef6bf3ef60949c02} 
+Recursive\+Maze\+Algorithm.\+Recursive\+Maze\+Algorithm (\begin{DoxyParamCaption}\item[{int}]{l\+\_\+rows}{, }\item[{int}]{l\+\_\+columns}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calls the \doxylink{class_maze_generator}{Maze\+Generator} contructor and sets sets the rows and columns in the \doxylink{class_maze_generator}{Maze\+Generator} script. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l\+\_\+rows} & \texorpdfstring{$<$}{<}/\+The rows of the maze.\texorpdfstring{$>$}{>} 
+\begin{DoxyParams}{Parameters}
+{\em l\+\_\+columns} & \texorpdfstring{$<$}{<}/\+The columns of the maze.\texorpdfstring{$>$}{>} \\
+\hline
+\end{DoxyParams}
+\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_recursive_maze_algorithm_ad39446bde6269c1957b090491dbe56c0}\index{RecursiveMazeAlgorithm@{RecursiveMazeAlgorithm}!GenerateMaze@{GenerateMaze}}
+\index{GenerateMaze@{GenerateMaze}!RecursiveMazeAlgorithm@{RecursiveMazeAlgorithm}}
+\doxysubsubsection{\texorpdfstring{GenerateMaze()}{GenerateMaze()}}
+{\footnotesize\ttfamily \label{class_recursive_maze_algorithm_ad39446bde6269c1957b090491dbe56c0} 
+override void Recursive\+Maze\+Algorithm.\+Generate\+Maze (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_recursive_maze_algorithm_aafa0a285711080b3ce90f75a3bb40267}\index{RecursiveMazeAlgorithm@{RecursiveMazeAlgorithm}!VisitCell@{VisitCell}}
+\index{VisitCell@{VisitCell}!RecursiveMazeAlgorithm@{RecursiveMazeAlgorithm}}
+\doxysubsubsection{\texorpdfstring{VisitCell()}{VisitCell()}}
+{\footnotesize\ttfamily \label{class_recursive_maze_algorithm_aafa0a285711080b3ce90f75a3bb40267} 
+void Recursive\+Maze\+Algorithm.\+Visit\+Cell (\begin{DoxyParamCaption}\item[{int}]{l\+\_\+row}{, }\item[{int}]{l\+\_\+column}{, }\item[{\mbox{\hyperlink{_tile_8cs_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{l\+\_\+move\+Made}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Generates the maze and will make a path trough the maze. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l\+\_\+row} & \texorpdfstring{$<$}{<}/\+The row of the tile which the path is being made.\texorpdfstring{$>$}{>} 
+\begin{DoxyParams}{Parameters}
+{\em l\+\_\+column} & \texorpdfstring{$<$}{<}/\+The column of the tile which the path is being made.\texorpdfstring{$>$}{>} 
+\begin{DoxyParams}{Parameters}
+{\em l\+\_\+move\+Made} & \texorpdfstring{$<$}{<}/\+The direction the current visited tile has been from so it doesn\textquotesingle{}t go back into itself.\texorpdfstring{$>$}{>} \\
+\hline
+\end{DoxyParams}
+\\
+\hline
+\end{DoxyParams}
+\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Maze Code/\mbox{\hyperlink{_recursive_maze_algorithm_8cs}{Recursive\+Maze\+Algorithm.\+cs}}\end{DoxyCompactItemize}

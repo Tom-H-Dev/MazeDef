@@ -1,0 +1,95 @@
+\doxysection{Player\+Sync Class Reference}
+\hypertarget{class_player_sync}{}\label{class_player_sync}\index{PlayerSync@{PlayerSync}}
+Inheritance diagram for Player\+Sync\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player_sync}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_sync_a01e8c46cde3f6d456bbdd63c123ca570}{On\+Photon\+Serialize\+View}} (Photon\+Stream stream, Photon\+Message\+Info info)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Mono\+Behaviour\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_player_sync_aec2f22834ae307a1090ef9e6f4f0b7c2}{local\+Scripts}}
+\item 
+Game\+Object\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_player_sync_ad4eae8c3300ce9b42d1392fb4ba9aa9e}{local\+Objects}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_sync_a43e9198bf37693e1e5575b8011ed0b80}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_player_sync_a15cb7c7ec22dd87b9b26bb35d6ce1bc4}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vector3 \mbox{\hyperlink{class_player_sync_a9a6850f6d2ae978a2c1664ea28d7cf8b}{latest\+Pos}}
+\item 
+Quaternion \mbox{\hyperlink{class_player_sync_a49b7875ab719480a222db9fe80803806}{latest\+Rot}}
+\item 
+Game\+Object \mbox{\hyperlink{class_player_sync_a0f5ea03c42f67a3389e96d22f48e79ce}{\+\_\+pause\+Menu}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_player_sync_a01e8c46cde3f6d456bbdd63c123ca570}\index{PlayerSync@{PlayerSync}!OnPhotonSerializeView@{OnPhotonSerializeView}}
+\index{OnPhotonSerializeView@{OnPhotonSerializeView}!PlayerSync@{PlayerSync}}
+\doxysubsubsection{\texorpdfstring{OnPhotonSerializeView()}{OnPhotonSerializeView()}}
+{\footnotesize\ttfamily \label{class_player_sync_a01e8c46cde3f6d456bbdd63c123ca570} 
+void Player\+Sync.\+On\+Photon\+Serialize\+View (\begin{DoxyParamCaption}\item[{Photon\+Stream}]{stream}{, }\item[{Photon\+Message\+Info}]{info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_player_sync_a43e9198bf37693e1e5575b8011ed0b80}\index{PlayerSync@{PlayerSync}!Start@{Start}}
+\index{Start@{Start}!PlayerSync@{PlayerSync}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_player_sync_a43e9198bf37693e1e5575b8011ed0b80} 
+void Player\+Sync.\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_player_sync_a15cb7c7ec22dd87b9b26bb35d6ce1bc4}\index{PlayerSync@{PlayerSync}!Update@{Update}}
+\index{Update@{Update}!PlayerSync@{PlayerSync}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_player_sync_a15cb7c7ec22dd87b9b26bb35d6ce1bc4} 
+void Player\+Sync.\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_player_sync_a0f5ea03c42f67a3389e96d22f48e79ce}\index{PlayerSync@{PlayerSync}!\_pauseMenu@{\_pauseMenu}}
+\index{\_pauseMenu@{\_pauseMenu}!PlayerSync@{PlayerSync}}
+\doxysubsubsection{\texorpdfstring{\_pauseMenu}{\_pauseMenu}}
+{\footnotesize\ttfamily \label{class_player_sync_a0f5ea03c42f67a3389e96d22f48e79ce} 
+Game\+Object Player\+Sync.\+\_\+pause\+Menu\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_sync_a9a6850f6d2ae978a2c1664ea28d7cf8b}\index{PlayerSync@{PlayerSync}!latestPos@{latestPos}}
+\index{latestPos@{latestPos}!PlayerSync@{PlayerSync}}
+\doxysubsubsection{\texorpdfstring{latestPos}{latestPos}}
+{\footnotesize\ttfamily \label{class_player_sync_a9a6850f6d2ae978a2c1664ea28d7cf8b} 
+Vector3 Player\+Sync.\+latest\+Pos\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_sync_a49b7875ab719480a222db9fe80803806}\index{PlayerSync@{PlayerSync}!latestRot@{latestRot}}
+\index{latestRot@{latestRot}!PlayerSync@{PlayerSync}}
+\doxysubsubsection{\texorpdfstring{latestRot}{latestRot}}
+{\footnotesize\ttfamily \label{class_player_sync_a49b7875ab719480a222db9fe80803806} 
+Quaternion Player\+Sync.\+latest\+Rot\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_player_sync_ad4eae8c3300ce9b42d1392fb4ba9aa9e}\index{PlayerSync@{PlayerSync}!localObjects@{localObjects}}
+\index{localObjects@{localObjects}!PlayerSync@{PlayerSync}}
+\doxysubsubsection{\texorpdfstring{localObjects}{localObjects}}
+{\footnotesize\ttfamily \label{class_player_sync_ad4eae8c3300ce9b42d1392fb4ba9aa9e} 
+Game\+Object \mbox{[}$\,$\mbox{]} Player\+Sync.\+local\+Objects}
+
+\Hypertarget{class_player_sync_aec2f22834ae307a1090ef9e6f4f0b7c2}\index{PlayerSync@{PlayerSync}!localScripts@{localScripts}}
+\index{localScripts@{localScripts}!PlayerSync@{PlayerSync}}
+\doxysubsubsection{\texorpdfstring{localScripts}{localScripts}}
+{\footnotesize\ttfamily \label{class_player_sync_aec2f22834ae307a1090ef9e6f4f0b7c2} 
+Mono\+Behaviour \mbox{[}$\,$\mbox{]} Player\+Sync.\+local\+Scripts}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Multiplayer/\mbox{\hyperlink{_player_sync_8cs}{Player\+Sync.\+cs}}\end{DoxyCompactItemize}

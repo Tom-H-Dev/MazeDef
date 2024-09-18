@@ -1,0 +1,127 @@
+\doxysection{Pressure\+Plate Class Reference}
+\hypertarget{class_pressure_plate}{}\label{class_pressure_plate}\index{PressurePlate@{PressurePlate}}
+Inheritance diagram for Pressure\+Plate\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pressure_plate}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pressure_plate_ab7eb0dca26aa36a86b4f5c0af0310ce0}{On\+Photon\+Serialize\+View}} (Photon\+Stream stream, Photon\+Message\+Info info)
+\item 
+void \mbox{\hyperlink{class_pressure_plate_a5fe911c1764437f02e1bb10807265e5c}{Open\+Gate}} (bool l\+\_\+is\+Open, Animator l\+\_\+animator)
+\begin{DoxyCompactList}\small\item\em Sets the bool for the animator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pressure_plate_afcc74d5aa5493029403dd1aab8bd8ef7}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_pressure_plate_a8019e8018c65396694b5a7495228edfc}{On\+Collision\+Enter}} (Collision collision)
+\begin{DoxyCompactList}\small\item\em If the player is standind on the pressure plate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pressure_plate_ad617e2040c09028618098256ab711429}{On\+Collision\+Exit}} (Collision collision)
+\begin{DoxyCompactList}\small\item\em If the player moves off the pressure plate the gate will be closed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_pressure_plate_8cs_a41e7714338339fcb650d2693a119faf8}{Player\+IDs}} \mbox{\hyperlink{class_pressure_plate_a9fe1f80b52e7894f28dc4ba4de4ad9ad}{\+\_\+what\+Player\+Pressure\+Plate}}
+\item 
+List$<$ Animator $>$ \mbox{\hyperlink{class_pressure_plate_a475ac45ac513c95c35cbc282517aa90a}{\+\_\+animators}}
+\item 
+Audio\+Source \mbox{\hyperlink{class_pressure_plate_a66e4f76090838df9a66915140b73e108}{\+\_\+audio\+Source}}
+\item 
+Audio\+Clip \mbox{\hyperlink{class_pressure_plate_a3f0f91248a7f59ec42588f500726c0b1}{\+\_\+sfx}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_pressure_plate_a8019e8018c65396694b5a7495228edfc}\index{PressurePlate@{PressurePlate}!OnCollisionEnter@{OnCollisionEnter}}
+\index{OnCollisionEnter@{OnCollisionEnter}!PressurePlate@{PressurePlate}}
+\doxysubsubsection{\texorpdfstring{OnCollisionEnter()}{OnCollisionEnter()}}
+{\footnotesize\ttfamily \label{class_pressure_plate_a8019e8018c65396694b5a7495228edfc} 
+void Pressure\+Plate.\+On\+Collision\+Enter (\begin{DoxyParamCaption}\item[{Collision}]{collision}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+If the player is standind on the pressure plate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collision} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_pressure_plate_ad617e2040c09028618098256ab711429}\index{PressurePlate@{PressurePlate}!OnCollisionExit@{OnCollisionExit}}
+\index{OnCollisionExit@{OnCollisionExit}!PressurePlate@{PressurePlate}}
+\doxysubsubsection{\texorpdfstring{OnCollisionExit()}{OnCollisionExit()}}
+{\footnotesize\ttfamily \label{class_pressure_plate_ad617e2040c09028618098256ab711429} 
+void Pressure\+Plate.\+On\+Collision\+Exit (\begin{DoxyParamCaption}\item[{Collision}]{collision}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+If the player moves off the pressure plate the gate will be closed. 
+
+\Hypertarget{class_pressure_plate_ab7eb0dca26aa36a86b4f5c0af0310ce0}\index{PressurePlate@{PressurePlate}!OnPhotonSerializeView@{OnPhotonSerializeView}}
+\index{OnPhotonSerializeView@{OnPhotonSerializeView}!PressurePlate@{PressurePlate}}
+\doxysubsubsection{\texorpdfstring{OnPhotonSerializeView()}{OnPhotonSerializeView()}}
+{\footnotesize\ttfamily \label{class_pressure_plate_ab7eb0dca26aa36a86b4f5c0af0310ce0} 
+void Pressure\+Plate.\+On\+Photon\+Serialize\+View (\begin{DoxyParamCaption}\item[{Photon\+Stream}]{stream}{, }\item[{Photon\+Message\+Info}]{info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_pressure_plate_a5fe911c1764437f02e1bb10807265e5c}\index{PressurePlate@{PressurePlate}!OpenGate@{OpenGate}}
+\index{OpenGate@{OpenGate}!PressurePlate@{PressurePlate}}
+\doxysubsubsection{\texorpdfstring{OpenGate()}{OpenGate()}}
+{\footnotesize\ttfamily \label{class_pressure_plate_a5fe911c1764437f02e1bb10807265e5c} 
+void Pressure\+Plate.\+Open\+Gate (\begin{DoxyParamCaption}\item[{bool}]{l\+\_\+is\+Open}{, }\item[{Animator}]{l\+\_\+animator}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the bool for the animator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l\+\_\+is\+Open} & \texorpdfstring{$<$}{<}/ The bool if the gate is open or closed\texorpdfstring{$>$}{>} 
+\begin{DoxyParams}{Parameters}
+{\em l\+\_\+animator} & $<$/\+The$>$ \\
+\hline
+\end{DoxyParams}
+\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_pressure_plate_afcc74d5aa5493029403dd1aab8bd8ef7}\index{PressurePlate@{PressurePlate}!Start@{Start}}
+\index{Start@{Start}!PressurePlate@{PressurePlate}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_pressure_plate_afcc74d5aa5493029403dd1aab8bd8ef7} 
+void Pressure\+Plate.\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_pressure_plate_a475ac45ac513c95c35cbc282517aa90a}\index{PressurePlate@{PressurePlate}!\_animators@{\_animators}}
+\index{\_animators@{\_animators}!PressurePlate@{PressurePlate}}
+\doxysubsubsection{\texorpdfstring{\_animators}{\_animators}}
+{\footnotesize\ttfamily \label{class_pressure_plate_a475ac45ac513c95c35cbc282517aa90a} 
+List$<$Animator$>$ Pressure\+Plate.\+\_\+animators\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_pressure_plate_a66e4f76090838df9a66915140b73e108}\index{PressurePlate@{PressurePlate}!\_audioSource@{\_audioSource}}
+\index{\_audioSource@{\_audioSource}!PressurePlate@{PressurePlate}}
+\doxysubsubsection{\texorpdfstring{\_audioSource}{\_audioSource}}
+{\footnotesize\ttfamily \label{class_pressure_plate_a66e4f76090838df9a66915140b73e108} 
+Audio\+Source Pressure\+Plate.\+\_\+audio\+Source\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_pressure_plate_a3f0f91248a7f59ec42588f500726c0b1}\index{PressurePlate@{PressurePlate}!\_sfx@{\_sfx}}
+\index{\_sfx@{\_sfx}!PressurePlate@{PressurePlate}}
+\doxysubsubsection{\texorpdfstring{\_sfx}{\_sfx}}
+{\footnotesize\ttfamily \label{class_pressure_plate_a3f0f91248a7f59ec42588f500726c0b1} 
+Audio\+Clip Pressure\+Plate.\+\_\+sfx\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_pressure_plate_a9fe1f80b52e7894f28dc4ba4de4ad9ad}\index{PressurePlate@{PressurePlate}!\_whatPlayerPressurePlate@{\_whatPlayerPressurePlate}}
+\index{\_whatPlayerPressurePlate@{\_whatPlayerPressurePlate}!PressurePlate@{PressurePlate}}
+\doxysubsubsection{\texorpdfstring{\_whatPlayerPressurePlate}{\_whatPlayerPressurePlate}}
+{\footnotesize\ttfamily \label{class_pressure_plate_a9fe1f80b52e7894f28dc4ba4de4ad9ad} 
+\mbox{\hyperlink{_pressure_plate_8cs_a41e7714338339fcb650d2693a119faf8}{Player\+IDs}} Pressure\+Plate.\+\_\+what\+Player\+Pressure\+Plate\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Maze Code/\mbox{\hyperlink{_pressure_plate_8cs}{Pressure\+Plate.\+cs}}\end{DoxyCompactItemize}
