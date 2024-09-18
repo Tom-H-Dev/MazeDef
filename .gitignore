@@ -48,9 +48,6 @@ ExportedObj/
 *.opendb
 *.VC.db
 
-#Doxygen html files
-./html
-
 # Unity3D generated meta files
 *.pidb.meta
 *.pdb.meta
@@ -64,6 +61,18 @@ sysinfo.txt
 *.aab
 *.unitypackage
 *.app
+
+# Doxygen generated documentation
+/docs/
+/html/
+/latex/
+/xml/
+/rtf/
+/man/
+/doxygen/
+*.tag
+*.tmp
+
 
 # Crashlytics generated file
 crashlytics-build.properties
